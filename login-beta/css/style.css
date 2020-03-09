@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.titulo-primary {
+    margin-bottom: 15px;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.titulo2 {
+    margin-bottom: 15px;
+    font-size: 30px;
+    color: #10ad66;
+
+}
+
+.descricao {
+    font-size: 17px;
+    font-weight: 300;
+    color: white;
+}
+
+.descricao-primary {
+    color: white;
+}
+
+.descricao-secudary {
+    color: #10ad66;
+}
+
+.btn {
+    border-radius:  20px;
+    text-transform: uppercase;
+    color: white;
+    font-size: 14px;
+    padding: 10px 50px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 200px;
+    align-self: center;
+    border-width: 0px;
+    margin-top: 1rem;
+}
+
+.btn-primary {
+    background-color: transparent;
+    border: 1px solid white;
+}
+
+.btn-primary:hover {
+    background-color: white;
+    color: #10ad66;
+    transition: background-color 0.8s;
+}
+
+.btn-secundary {
+    background-color: #10ad66;
+    border: 1px solid #10ad66;
+    transition: background-color 0.8s;
+}
+
+.btn-secundary:hover {
+    background-color: white;
+    border: 1px solid #10ad66;
+    color: #10ad66;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    height: 100vh;
+    background-color: white;
+}
+
+.conteudo {
+    border-radius: 20px;
+    background-color: white;
+    width: 960px;
+    height: 50%;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.primeiro-conteudo {
+    display: flex;
+}
+
+
+.primeiro-conteudo .segunda-coluna {
+    z-index: 14;
+}
+
+.conteudo::before{
+    content: "";
+    position: absolute;
+    background-color: #10ad66;
+    width: 40%;
+    height: 120%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+
+
+    left: 0;
+}
+
+.primeira-coluna {
+    text-align: center;
+    width: 40%;
+    z-index: 10;
+}
+
+.segunda-coluna {
+    align-items: center;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.link-social-midia {
+    margin-left: 10px;
+}
+
+.link-social-midia:not(:first-child) {
+    margin-left: 10px;
+}
+
+.link-social-midia:hover .item-social-midia{
+    background-color: #10ad66;
+    color: white;
+    border-color: #10ad66;
+    transition: background-color 0.5s;
+}
+
+.lista-social-midia {
+    display: flex; 
+   list-style-type: none;
+}
+
+.item-social-midia {
+    border: 1px solid gray;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin-left: 10px;
+    color: gray;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form  input {
+    height: 45px;
+    border: none;
+    background-color: white;
+    text-align: center;
+}
+
+.label-input {
+    background-color: white;
+    margin: 8px;
+}
+
+.icon-modify {
+    color: gray;
+    padding: 0 5px;
+}
+
+/*Segundo Conteúdo*/
+.segundo-conteudo {
+    position: absolute;
+    display: flex;
+}
+
+.segundo-conteudo .primeira-coluna {
+    order: 2;
+    z-index: -1;
+}
+
+.segundo-conteudo .segunda-coluna {
+    order: 1;
+    z-index: -1;
+}
+
+.password {
+    color: gray;
+    font-size: 14px;
+    margin: 15px 0;
+    text-align: center;
+}
+
+.password::first-letter {
+    text-transform: capitalize;
+}
+
+
+/*Quando apertat em Entrar*/
+.sign-in-js .primeiro-conteudo .primeira-coluna,
+.sign-in-js .primeiro-conteudo .segunda-coluna{
+    z-index: -1;
+}
+/* Quando o botão sign-in-js for ativada, o primeiro conteudo e primeira coluna somem
+assim como a segunda coluna do primeiro conteudo */
+
+
+
+.sign-in-js .segundo-conteudo .segunda-coluna {
+    z-index: 11;
+}
+
+.sign-in-js .segundo-conteudo .primeira-coluna {
+    z-index: 13;
+}
+/* Quando ativado o botão sign-in-js o segundo conteudo, primeira coluna e segunda coluna
+devem aparecer*/
+
+.sign-in-js .conteudo::before {
+    left: 60%;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    animation: slidein 1s;
+    z-index: 12;
+}
+
+/* Quando ativo o botão sign-in-js o conteudo ver recebe uma localização para a esquerda de 60%*/
+
+.sign-up-js .conteudo::before {
+    animation: slideout 1s;
+
+    z-index: 12;
+}
+
+
+
+/*Quando apertat em Cadastrar*/
+.sign-up-js .segundo-conteudo .primeira-coluna,
+.sign-up-js .segundo-conteudo .segunda-coluna {
+    z-index: -1;
+}
+
+/* Quando o botão sign-in-js for ativada, o segundo conteudo e primeira coluna somem
+assim como a segunda coluna do primeiro conteudo */
+
+.sign-up-js .primeiro-conteudo .segunda-coluna {
+    z-index: 11;
+}
+
+.sign-up-js .primeiro-conteudo .primeira-coluna {
+    z-index: 13;
+}
+/* Quando ativado o botão sign-in-js o primeiro conteudo, primeira coluna e segunda coluna
+devem aparecer*/
+
+
+/*Animações com CSS*/
+/*Keyframes é a palavra reservada para as animações*/
+@keyframes slidein{
+    from { /*Aonde começa a animação*/
+        left: 0;
+        width: 40%;
+    }
+    
+    to { /*Aonde termina a animação*/
+        left: 60%;
+        width: 40%;
+    }
+}
+
+
+
+@keyframes slideout{
+    from { /*Aonde começa a animação*/
+        left: 60%;
+        width: 40%;
+    }
+
+    to { /*Aonde termina a animação*/
+        left: 0%;
+        width: 40%;
+    }
+}
