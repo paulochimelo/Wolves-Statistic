@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Testes Implantação</title>
+</head>
+<body>
+    <div class = 'titulo'>
+        <h1><center>Testes Implantação</center></h1>
+    </div>  
+    <div class = 'qualnom'>
+        <h1>Qualitativa Nominal</h1>
+        <p>Insira os Números</p> 
+        <input type="string" id="valor"  placeholder="Numeros sepadados por ;">
+        <button class="button" onclick="qualitativanominal()">Testar</button>
+    </div>
+    <div class = 'qualcont'>
+        <h1>Quantitativa Continua</h1>
+        <p>Insira os Números</p> 
+        <input type="string" id="valores"  placeholder="Numeros sepadados por ;">
+        <button class="button" onclick="quantitativacontinua()">Testar</button>
+    </div> 
+    <script scr = "qualitativa.js"></script>
+    <script>
+        function quantitativacontinua(){
+
+        let adc = document.getElementById("valores").value;
+        let lista= adc.toString().split(';')//tira o ;
+        lista.sort(Crescente)//executa a função de organização
+
+        let xmax = lista[lista.length - 1];
+        let xmin = lista[0]
+        let at = xmax-xmin
+
+        let k = lista.length
+        k = (Math.sqrt(k))
+        let k2 =Math.floor(k)
+
+        alert(k2,k)
+        alert(lista)
+        }
+
+
+        function Crescente(a,b){
+          return(a-b)	// organiza
+        }
+    </script>
+</body>
+</html>
