@@ -1,7 +1,8 @@
-function teste(){
+function qualitativacontinua(){
 
 let adc = document.getElementById("valores").value;
-let lista = [adc]
+let lista= adc.toString().split(';')//tira o ;
+lista.sort(Crescente)//executa a função de organização
 
 let xmax = lista[lista.length - 1];
 let xmin = lista[0]
@@ -15,5 +16,7 @@ alert(k2,k)
 }
 
 
-
+function Crescente(a,b){
+    return(a-b)	// organiza
+}
 
