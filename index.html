@@ -10,10 +10,14 @@
     <div class = 'titulo'>
         <h1><center>Testes Implantação</center></h1>
     </div>  
-    <div class = 'qualnom'>
-        <h1>Qualitativa Nominal</h1>
+    <div class = 'qualdisenom'>
+        <h1>Qualitativa Discreta e Nominal</h1>
         <p>Insira os Números</p> 
         <input type="string" id="valor"  placeholder="Numeros sepadados por ;">
+        <select id = qualitativa>
+            <option value="Discreta" id = "discreta"></option>
+            <option value="Nominal"  id = "nominal"></option>
+        </select>
         <button class="button" onclick="qualitativanominal()">Testar</button>
     </div>
     <div class = 'qualcont'>
@@ -24,27 +28,33 @@
     </div> 
     <script scr = "qualitativa.js"></script>
     <script>
+        function qualitativanominal(){
+            let adcd = document.getElementById("valor").value;
+            let listagem = adcd.toString().split(';');
+            alert(listagem)
+        }
+
         function quantitativacontinua(){
 
-        let adc = document.getElementById("valores").value;
-        let lista= adc.toString().split(';')//tira o ;
-        lista.sort(Crescente)//executa a função de organização
+            let adc = document.getElementById("valores").value;
+            let lista= adc.toString().split(';')//tira o ;
+            lista.sort(Crescente)//executa a função de organização
 
-        let xmax = lista[lista.length - 1];
-        let xmin = lista[0]
-        let at = xmax-xmin
+            let xmax = lista[lista.length - 1];
+            let xmin = lista[0]
+            let at = xmax-xmin
 
-        let k = lista.length
-        k = (Math.sqrt(k))
-        let k2 =Math.floor(k)
+            let k = lista.length
+            k = (Math.sqrt(k))
+            let k2 =Math.floor(k)
 
-        alert(k2,k)
-        alert(lista)
-        }
+            alert(k2,k)
+            alert(lista)
+            }
 
 
         function Crescente(a,b){
-          return(a-b)	// organiza
+            return(a-b)	// organiza
         }
     </script>
 </body>
