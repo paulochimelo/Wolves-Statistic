@@ -10,52 +10,38 @@
     <div class = 'titulo'>
         <h1><center>Testes Implantação</center></h1>
     </div>  
-    <div class = 'qualdisenom'>
-        <h1>Qualitativa Discreta e Nominal</h1>
+    <div class = 'qualdiscre'>
+        <h1>Qualitativa</h1>
+        <p>Nome da variavel</p> 
+        <input type="string" id="variavelqualitativa"  placeholder="">
+        <select id = tipdadosqualitativa>
+            <option value="AMOSTRA"  id = "Amostraqual">AMOSTRA</option>
+            <option value="POPULAÇÃO"  id = "Amostraqual">POPULAÇÃO</option>
+        </select>
         <p>Insira os Números</p> 
         <input type="string" id="valor"  placeholder="Numeros sepadados por ;">
         <select id = qualitativa>
-            <option value="Discreta" id = "discreta"></option>
-            <option value="Nominal"  id = "nominal"></option>
+            <option value="DISCRETA"  id = "discreta">DISCRETA</option>
+            <option value="NOMINAL"  id = "nominal">NOMINAL</option>
         </select>
-        <button class="button" onclick="qualitativanominal()">Testar</button>
+        <button type="button" onclick="qualitativa()">Teste</button>
     </div>
-    <div class = 'qualcont'>
-        <h1>Quantitativa Continua</h1>
+    <div class = 'Quantitativa'>
+        <h1>Quantitativa </h1>
+        <p>Nome da variavel</p>
+        <input type="string" id="variavelquantitativa"  placeholder="">
+        <select id = tipdadosquantitativa>
+            <option value="AMOSTRA"  id = "Amostraquant">AMOSTRA</option>
+            <option value="POPULAÇÃO"  id = "Amostraquant">POPULAÇÃO</option>
+        </select>
         <p>Insira os Números</p> 
         <input type="string" id="valores"  placeholder="Numeros sepadados por ;">
+        <select id = qualitativa>
+            <option value="discreta"  id = "discretaquant">DISCRETA</option>
+            <option value="Nominal"  id = "nominalquant">NOMINAL</option>
+        </select>
         <button class="button" onclick="quantitativacontinua()">Testar</button>
     </div> 
-    <script scr = "qualitativa.js"></script>
-    <script>
-        function qualitativanominal(){
-            let adcd = document.getElementById("valor").value;
-            let listagem = adcd.toString().split(';');
-            alert(listagem)
-        }
-
-        function quantitativacontinua(){
-
-            let adc = document.getElementById("valores").value;
-            let lista= adc.toString().split(';')//tira o ;
-            lista.sort(Crescente)//executa a função de organização
-
-            let xmax = lista[lista.length - 1];
-            let xmin = lista[0]
-            let at = xmax-xmin
-
-            let k = lista.length
-            k = (Math.sqrt(k))
-            let k2 =Math.floor(k)
-
-            alert(k2,k)
-            alert(lista)
-            }
-
-
-        function Crescente(a,b){
-            return(a-b)	// organiza
-        }
-    </script>
+    <script src ="func.js"></script>
 </body>
 </html>
