@@ -1,9 +1,20 @@
 function qualitativa(){
     let tipodado = document.getElementById('tipdadosqualitativa').value
     let tipoquali = document.getElementById('qualitativa').value
-    if (tipodado = 'AMOSTRA' && tipoquali = 'DISCRETA'){
-        Console.LOG("SIM")
+    let sub1 = tipodado
+    let sub2 = tipoquali
+    
+    if (sub1 = 'AMOSTRA'){
+        console.log("SIM")
+        if (tipoquali = 'DISCRETA'){
+            console.log('34')
+        }else if (tipoquali = 'NOMINAL'){
+            console.log('64')
+        }
+    } else if (sub1 = 'POPULAÇÃO'){
+        console.log('nÃO')
     }
+ 
       
 
     console.log(tipodado + tipoquali)
