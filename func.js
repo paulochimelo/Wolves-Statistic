@@ -1,29 +1,29 @@
+
+
 function qualitativa(){
     let tipodado = document.getElementById('tipdadosqualitativa').value
     let tipoquali = document.getElementById('qualitativa').value
-    let sub1 = tipodado
-    let sub2 = tipoquali
     
-    if (sub1 = 'AMOSTRA'){
-        console.log("SIM")
-        if (tipoquali = 'DISCRETA'){
+
+    if (tipodado == 'AMOSTRA'){
+        if (tipoquali == 'DISCRETA'){
             console.log('34')
-        }else if (tipoquali = 'NOMINAL'){
+        }else if (tipoquali == 'NOMINAL'){
+            qualitativanominal()
+        }
+        }else if (tipodado == 'POPULAÇÃO'){
+        if (tipoquali == 'DISCRETA'){
+            console.log('34')
+        }else if (tipoquali == 'NOMINAL'){
             console.log('64')
         }
-    } else if (sub1 = 'POPULAÇÃO'){
-        console.log('nÃO')
-    }
- 
-      
-
-    console.log(tipodado + tipoquali)
+}
 }
 
 function qualitativanominal(){
     let adcd = document.getElementById("valor").value;
     let listagem = adcd.toString().split(';');
-    alert(listagem)
+    console.log(listagem)
 }
 
 function quantitativacontinua(){
@@ -64,9 +64,3 @@ let k2 = k.tofixed(0)
 
 alert(k2,k)
 }
-
-
-
-
-
- 
