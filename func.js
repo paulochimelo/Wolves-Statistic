@@ -20,6 +20,26 @@ function qualitativa(){
 }
 }
 
+function quantitativa(){
+    let tipodados = document.getElementById('tipdadosquantitativa').value
+    let tipoquanti = document.getElementById('quantitativa').value
+    
+
+    if (tipodados == 'AMOSTRA'){
+        if (tipoquanti == 'DISCRETA'){
+            console.log('34')
+        }else if (tipoquanti == 'NOMINAL'){
+            qualitativanominal()
+        }
+        }else if (tipodados == 'POPULAÇÃO'){
+        if (tipoquanti == 'DISCRETA'){
+            console.log('34')
+        }else if (tipoquanti == 'NOMINAL'){
+            console.log('64')
+        }
+    }
+}
+
 function qualitativanominal(){
     let adcd = document.getElementById("valor").value;
     let listagem = adcd.toString().split(';');
@@ -41,8 +61,8 @@ function quantitativacontinua(){
     k = (Math.sqrt(k))
     let k2 =Math.floor(k)
 
-    alert(k2,k)
-    alert(lista)
+    console.log(k2,k)
+    console.log(lista)
     }
 
 
