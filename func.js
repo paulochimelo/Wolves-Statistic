@@ -25,6 +25,7 @@ function qualitativanominal(){
     let listagem = adcd.toString().split(';');
     console.log(listagem)
 }
+let abcdario
 
 function quantitativacontinua(){
 
