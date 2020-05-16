@@ -32,7 +32,7 @@ function quantitativa(){
         if (tipoquanti == 'DISCRETA'){
             console.log('34')
         }else if (tipoquanti == 'NOMINAL'){
-            qualitativanominal()
+            quantitativanominal()
         }
         }else if (tipodados == 'POPULAÇÃO'){
         if (tipoquanti == 'DISCRETA'){
@@ -44,10 +44,36 @@ function quantitativa(){
 }
 
 function qualitativanominal(){
-    let adcd = document.getElementById("valor").value;
-    let listagem = adcd.toString().split(';');
-    console.log(listagem)
-}
+        tablequalitativa.innerHTML +="<tr> <td>VARIAVEL</td><td>FI</td><td>FR%   </td><td>FAC   </td><td>FAC%  </td></tr> "
+		let nomelet = document.getElementById('variavelquali').value;
+		let dados_nominal = document.getElementById('dados_nominal').value;
+		let vetNominal = dados_nominal.toString().split(';');
+		vetNominal.sort()
+		 let quantDados ={} ;
+		 let acum =0 ;
+		variavelqualiiavel.innerHTML+=variavelquali
+			for(let i = 0 ; i<vetNominal.length;i++){ 
+				if(quantDados [vetNominal[i] ]){
+					quantDados[vetNominal[i]]+=1
+					acum++
+				}else{
+					quantDados[vetNominal[i]]=1 
+					acum++
+				}			
+		}
+		let fac =0;
+		let acumFac = 0;
+		let factotPorc =0;
+		let acumFacPorc = 0; 
+		for(let chave in quantDados){ 
+		   fac+=quantDados[chave]
+            facPorc = Math.round((quantDados[chave]/acum)*100)
+            factotPorc = fac + acumFacPorc
+            tablequalitativa.innerHTML+= `<td> ${chave }  <td> ${quantDados[chave]} <td>${Math.round((quantDados[chave]/acum)*100) } % <td> ${fac}<td> ${factotPorc}  <br> `
+            acumFacPorc+=facPorc
+		}
+	}
+
 
 
 function quantitativacontinua(){
