@@ -3,7 +3,10 @@
 function qualitativa(){
     let tipodado = document.getElementById('tipdadosqualitativa').value
     let tipoquali = document.getElementById('qualitativa').value
-    
+    tablequalitativa.innerHTML = ""
+    variavelquali.innerHTML=''
+    tablequantitativa.innerHTML = ""
+    variavelquant.innerHTML=''
 
     if (tipodado == 'AMOSTRA'){
         if (tipoquali == 'DISCRETA'){
