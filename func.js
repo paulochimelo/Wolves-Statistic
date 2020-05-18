@@ -45,7 +45,7 @@ function quantitativa(){
 
 
 function qualitativadiscreta(){
-    
+    console.log('Teste')
 }
 function qualitativanominal(){
     tablequalitativa.innerHTML +="<tr> <td>VARIAVEL</td><td>FI</td><td>FR%   </td><td>FAC   </td><td>FAC%  </td></tr> "
