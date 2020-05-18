@@ -47,7 +47,7 @@ function quantitativa(){
 function qualitativadiscreta(){
     tablequalitativa.innerHTML +="<tr> <td>VARIAVEL</td><td>FI</td><td>FR%   </td><td>FAC   </td><td>FAC%  </td></tr> "
     var nomeVar = document.getElementById('variavelqualitativa').value; //Coloca o nome da variavel
-    var dados = document.getElementById('dados').value; //puxa os dados da pagina
+    var dados = document.getElementById('valor').value; //puxa os dados da pagina
     let vetDiscreta = dados.toString().split(';'); // separa os valores e insere no vetor
     vetDiscreta.sort(ordemCrescente) // deixa o vetor na ordem crescente/alfabetica
     var quantDados ={} ; //obj com informando a quantidade de cada elemento 
