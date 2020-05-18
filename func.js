@@ -45,26 +45,7 @@ function quantitativa(){
 
 
 function qualitativadiscreta(){
-    tablequalitativa.innerHTML +="<tr> <td>VARIAVEL</td><td>FI</td><td>FR%   </td><td>FAC   </td><td>FAC%  </td></tr> "
-    var nomeVar = document.getElementById('variavelqualitativa').value; //Coloca o nome da variavel
-    var dados = document.getElementById('valor').value; //puxa os dados da pagina
-    let vetDiscreta = dados.toString().split(';'); // separa os valores e insere no vetor
-    vetDiscreta.sort(ordemCrescente) // deixa o vetor na ordem crescente/alfabetica
-    var quantDados ={} ; //obj com informando a quantidade de cada elemento 
-    var acum =0 ; // acumulador de elementos diferentes
-    variavelqualitativa.innerHTML+=nomeVar
-        for(let i = 0 ; i<vetDiscreta.length;i++){ //metodo para alocar a quantidade de cada elemento
-            if(quantDados [vetDiscreta[i] ]){
-                quantDados[vetDiscreta[i]]+=1
-                acum++
-            }else{
-                quantDados[vetDiscreta[i]]=1
-                acum++
-            }			
-    }
-    for(var chave in quantDados){ // pega as variaveis
-        tablequalitativa.innerHTML+= `<td> ${chave /*Inserção de variavel na tabela*/}  <td> ${quantDados[chave]/*Insere a quantidade de repetições da variavel*/} <td>${Math.round((quantDados[chave]/acum)*100) /*Insere e calcula a porcentagem de vezes que o elemento foi inserido*/} % <td> <br> `
-        }
+    
 }
 function qualitativanominal(){
     tablequalitativa.innerHTML +="<tr> <td>VARIAVEL</td><td>FI</td><td>FR%   </td><td>FAC   </td><td>FAC%  </td></tr> "
