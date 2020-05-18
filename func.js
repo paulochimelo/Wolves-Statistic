@@ -5,8 +5,6 @@ function qualitativa(){
     let tipoquali = document.getElementById('qualitativa').value
     tablequalitativa.innerHTML = ""
     variavelquali.innerHTML=''
-    tablequantitativa.innerHTML = ""
-    variavelquant.innerHTML=''
 
     if (tipodado == 'AMOSTRA'){
         if (tipoquali == 'DISCRETA'){
@@ -26,13 +24,15 @@ function qualitativa(){
 function quantitativa(){
     let tipodados = document.getElementById('tipdadosquantitativa').value
     let tipoquanti = document.getElementById('quantitativa').value
+    tablequantitativa.innerHTML = ""
+    variavelquant.innerHTML=''
     
 
     if (tipodados == 'AMOSTRA'){
         if (tipoquanti == 'DISCRETA'){
             console.log('34')
         }else if (tipoquanti == 'NOMINAL'){
-            quantitativanominal()
+            
         }
         }else if (tipodados == 'POPULAÇÃO'){
         if (tipoquanti == 'DISCRETA'){
@@ -51,7 +51,7 @@ function qualitativanominal(){
 		vetNominal.sort()
 		 let quantDados ={} ;
 		 let acum =0 ;
-		variavelqualiiavel.innerHTML+=variavelquali
+         variavelquali.innerHTML+=nomevar
 			for(let i = 0 ; i<vetNominal.length;i++){ 
 				if(quantDados [vetNominal[i] ]){
 					quantDados[vetNominal[i]]+=1
