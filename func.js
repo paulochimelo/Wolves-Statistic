@@ -45,7 +45,7 @@ function quantitativa(){
 
 function qualitativanominal(){
         tablequalitativa.innerHTML +="<tr> <td>VARIAVEL</td><td>FI</td><td>FR%   </td><td>FAC   </td><td>FAC%  </td></tr> "
-		let nomelet = document.getElementById('variavelquali').value;
+		let nomevar = document.getElementById('variavelquali').value;
 		let dados_nominal = document.getElementById('dados_nominal').value;
 		let vetNominal = dados_nominal.toString().split(';');
 		vetNominal.sort()
