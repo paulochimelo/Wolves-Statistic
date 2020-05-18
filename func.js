@@ -44,35 +44,35 @@ function quantitativa(){
 }
 
 function qualitativanominal(){
-        tablequalitativa.innerHTML +="<tr> <td>VARIAVEL</td><td>FI</td><td>FR%   </td><td>FAC   </td><td>FAC%  </td></tr> "
-		let nomevar = document.getElementById('variavelquali').value;
-		let dados_nominal = document.getElementById('dados_nominal').value;
-		let vetNominal = dados_nominal.toString().split(';');
-		vetNominal.sort()
-		 let quantDados ={} ;
-		 let acum =0 ;
-         variavelquali.innerHTML+=nomevar
-			for(let i = 0 ; i<vetNominal.length;i++){ 
-				if(quantDados [vetNominal[i] ]){
-					quantDados[vetNominal[i]]+=1
-					acum++
-				}else{
-					quantDados[vetNominal[i]]=1 
-					acum++
-				}			
-		}
-		let fac =0;
-		let acumFac = 0;
-		let factotPorc =0;
-		let acumFacPorc = 0; 
-		for(let chave in quantDados){ 
-		   fac+=quantDados[chave]
-            facPorc = Math.round((quantDados[chave]/acum)*100)
-            factotPorc = fac + acumFacPorc
-            tablequalitativa.innerHTML+= `<td> ${chave }  <td> ${quantDados[chave]} <td>${Math.round((quantDados[chave]/acum)*100) } % <td> ${fac}<td> ${factotPorc}  <br> `
-            acumFacPorc+=facPorc
-		}
-	}
+    tablequalitativa.innerHTML +="<tr> <td>VARIAVEL</td><td>FI</td><td>FR%   </td><td>FAC   </td><td>FAC%  </td></tr> "
+    var nomeVar = document.getElementById('variavelqualitativa').value; //Coloca o nome da variavel
+    var dados_nominal = document.getElementById('valor').value; //puxa os dados da pagina
+    let vetNominal = dados_nominal.toString().split(';'); // separa os valores e insere no vetor
+    vetNominal.sort() // deixa o vetor na ordem crescente/alfabetica
+     var quantDados ={} ; //obj com informando a quantidade de cada elemento 
+     var acum =0 ; // acumulador de elementos diferentes
+    nomeVariavel.innerHTML+=nomeVar
+        for(let i = 0 ; i<vetNominal.length;i++){ //metodo para alocar a quantidade de cada elemento
+            if(quantDados [vetNominal[i] ]){
+                quantDados[vetNominal[i]]+=1
+                acum++
+            }else{
+                quantDados[vetNominal[i]]=1
+                acum++
+            }			
+    }
+    var fac =0;
+    var acumFac = 0;
+    var factotPorc =0;
+    var acumFacPorc = 0; 
+    for(var chave in quantDados){ // pega as variaveis
+       fac+=quantDados[chave]
+        facPorc = Math.round((quantDados[chave]/acum)*100)
+        factotPorc = fac + acumFacPorc
+        tablequalitativa.innerHTML+= `<td> ${chave /*Inserção de variavel na tabela*/}  <td> ${quantDados[chave]/*Insere a quantidade de repetições da variavel*/} <td>${Math.round((quantDados[chave]/acum)*100) /*Insere e calcula a porcentagem de vezes que o elemento foi inserido*/} % <td> ${fac}<td> ${factotPorc}  <br> `
+        acumFacPorc+=facPorc
+    }
+}
 
 
 
