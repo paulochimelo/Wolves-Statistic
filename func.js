@@ -8,7 +8,7 @@ function qualitativa(){
 
     if (tipodado == 'AMOSTRA'){
         if (tipoquali == 'DISCRETA'){
-            console.log('34')
+            qualitativadiscreta()
         }else if (tipoquali == 'NOMINAL'){
             qualitativanominal()
         }
