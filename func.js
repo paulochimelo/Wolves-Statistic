@@ -48,12 +48,12 @@ function ordemCrescente(a,b){
 }   
 function qualitativadiscreta(){
     tablequalitativa.innerHTML +="<tr> <td>VARIAVEL</td><td>FI</td><td>FR%   </td><td>FAC   </td><td>FAC%  </td></tr> "
-    var nomeVar = document.getElementById('variavelquali').value; 
-    var dados = document.getElementById('valor').value; 
+    let nomeVar = document.getElementById('variavelquali').value; 
+    let dados = document.getElementById('valor').value; 
     let vetDiscreta = dados.toString().split(';'); 
     vetDiscreta.sort(ordemCrescente) 
-    var quantDados ={} ; 
-    var acum =0 ; 
+    let quantDados ={} ; 
+    let acum =0 ; 
     variavelquali.innerHTML+=nomeVar
         for(let i = 0 ; i<vetDiscreta.length;i++){ 
             if(quantDados [vetDiscreta[i] ]){
@@ -70,12 +70,12 @@ function qualitativadiscreta(){
 }
 function qualitativanominal(){
     tablequalitativa.innerHTML +="<tr> <td>VARIAVEL</td><td>FI</td><td>FR%   </td><td>FAC   </td><td>FAC%  </td></tr> "
-    var nomeVar = document.getElementById('variavelqualitativa').value;
+    let nomeVar = document.getElementById('variavelqualitativa').value;
     var dados_nominal = document.getElementById('valor').value;
     let vetNominal = dados_nominal.toString().split(';');
     vetNominal.sort() 
-     var quantDados ={} ; 
-     var acum =0 ; 
+     let quantDados ={} ; 
+     let acum =0 ; 
      variavelquali.innerHTML+=nomeVar
         for(let i = 0 ; i<vetNominal.length;i++){ 
             if(quantDados [vetNominal[i] ]){
@@ -86,10 +86,10 @@ function qualitativanominal(){
                 acum++
             }			
     }
-    var fac =0;
-    var acumFac = 0;
-    var factotPorc =0;
-    var acumFacPorc = 0; 
+    let fac =0;
+    let acumFac = 0;
+    let factotPorc =0;
+    let acumFacPorc = 0; 
     for(var chave in quantDados){ 
        fac+=quantDados[chave]
         facPorc = Math.round((quantDados[chave]/acum)*100)
@@ -102,15 +102,15 @@ function qualitativanominal(){
 
 
 function quantitativacontinua(){
-        var nomeVar = document.getElementById('variavelquant').value;
+        let nomeVar = document.getElementById('variavelquant').value;
         variavelquant.innerHTML+=nomeVar
-		var dados_continua = document.getElementById('valores').value;
+		let dados_continua = document.getElementById('valores').value;
 		let vetDiscreta = dados_continua.toString().split(';');
 		vetDiscreta.sort(ordemCrescente)
-        var n = vetDiscreta.length;
-        var xmin=vetDiscreta[0];
-        var xmax=vetDiscreta[n-1];
-        var k =Math.sqrt(n);
+        let n = vetDiscreta.length;
+        let xmin=vetDiscreta[0];
+        let xmax=vetDiscreta[n-1];
+        let k =Math.sqrt(n);
         k=Math.floor(k)
         console.log(k)
 
