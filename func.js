@@ -47,14 +47,14 @@ function ordemCrescente(a,b){
     return(a-b)	
 }   
 function qualitativadiscreta(){
-    tablequalitativa.innerHTML +="<tr> <td>VARIAVEL</td><td>FI</td><td>FR%   </td><td>FAC   </td><td>FAC%  </td></tr> "
-    let nomeVar = document.getElementById('variavelquali').value; 
+    let nomeVar = document.getElementById('variavelqualitativa').value; 
+    tablequalitativa.innerHTML += `<tr> <td>${nomeVar}  </td><td>Frequência Simples</td> <td>Frequência Relativa</td><td>Frequência Acumulada</td><td>Frequência Acumulada Percentual</td></tr> `
     const dados = document.getElementById('valor').value; 
     const vetDiscreta = dados.toString().split(';'); 
     vetDiscreta.sort(ordemCrescente) 
     let quantDados ={} ; 
     let acum =0 ; 
-    variavelquali.innerHTML+=nomeVar
+    variavelquali.innerHTML+="Variavel Qualitativa Ordinal"
         for(let i = 0 ; i<vetDiscreta.length;i++){ 
             if(quantDados [vetDiscreta[i] ]){
                 quantDados[vetDiscreta[i]]+=1
@@ -64,9 +64,16 @@ function qualitativadiscreta(){
                 acum++
             }			
     }
+let fac = 0
+let fap = 0
+let fapcont = 0
     for(var chave in quantDados){ 
-        tablequalitativa.innerHTML+= `<td> ${chave /*Inserção de variavel na tabela*/}  <td> ${quantDados[chave]/*Insere a quantidade de repetições da variavel*/} <td>${Math.round((quantDados[chave]/acum)*100) /*Insere e calcula a porcentagem de vezes que o elemento foi inserido*/} % <td> <br> `      
-}
+        fac+=quantDados[chave]
+        fapcont += Math.round((quantDados[chave]/acum)*100)
+        fap += fapcont
+        tablequalitativa.innerHTML+= `<td> ${chave /*Inserção de variavel na tabela*/}  <td> ${quantDados[chave]/*Insere a quantidade de repetições da variavel*/} <td>${Math.round((quantDados[chave]/acum)*100) /*Insere e calcula a porcentagem de vezes que o elemento foi inserido*/} % <td> ${fac} <td> ${fap} % <br> `      
+    }
+
     //fazer media moda mediana
     let ultimo = vetDiscreta[vetDiscreta.length - 1]
     console.log(ultimo)
@@ -77,14 +84,14 @@ function mmmdiscreta(){
     
 }
 function qualitativanominal(){
-    tablequalitativa.innerHTML +="<tr> <td>VARIAVEL</td><td>FI</td><td>FR%   </td><td>FAC   </td><td>FAC%  </td></tr> "
     let nomeVar = document.getElementById('variavelqualitativa').value;
+    tablequalitativa.innerHTML +=`<tr> <td> ${nomeVar}      </td><td>Frequência Simples</td><td>Frequência Relativa</td><td>Frequência Acumulada</td><td>Frequência Acumulada Percentual</td></tr> `
     var dados_nominal = document.getElementById('valor').value;
     let vetNominal = dados_nominal.toString().split(';');
     vetNominal.sort() 
      let quantDados ={} ; 
      let acum =0 ; 
-     variavelquali.innerHTML+=nomeVar
+     variavelquali.innerHTML+= "Variavel Qualitativa Nominal"
         for(let i = 0 ; i<vetNominal.length;i++){ 
             if(quantDados [vetNominal[i] ]){
                 quantDados[vetNominal[i]]+=1
@@ -102,7 +109,7 @@ function qualitativanominal(){
        fac+=quantDados[chave]
         facPorc = Math.round((quantDados[chave]/acum)*100)
         factotPorc = fac + acumFacPorc
-        tablequalitativa.innerHTML+= `<td> ${chave}  <td> ${quantDados[chave]} <td>${Math.round((quantDados[chave]/acum)*100) } % <td> ${fac}<td> ${factotPorc}  <br> `
+        tablequalitativa.innerHTML+= `<td> ${chave}  <td> ${quantDados[chave]} <td>${Math.round((quantDados[chave]/acum)*100) } % <td> ${fac}<td> ${factotPorc} % <br> `
         acumFacPorc+=facPorc
     }
 }
@@ -110,7 +117,7 @@ function qualitativanominal(){
 
 
 function quantitativacontinua(){
-        let nomeVar = document.getElementById('variavelquant').value;
+        let nomeVar = document.getElementById('variavelquantitativa').value;
         variavelquant.innerHTML+=nomeVar
 		let dados_continua = document.getElementById('valores').value;
 		let vetDiscreta = dados_continua.toString().split(';');
@@ -137,7 +144,7 @@ function quantitativacontinua(){
         var valorFinal = 0 ;
         valorFinal = Number(valorInicial + ic)
         console.log(`${valorInicial}:${valorFinal}:${xmax}`)
-        tablequantitativa.innerHTML+=`<td>${valorInicial}<td>-------------<td>${valorFinal}<td>` 
+        tablequantitativa.innerHTML+=`<td>${valorInicial}<td>|----<td>${valorFinal}<td>` 
         var valorInicial = valorFinal
         }
     }
