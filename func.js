@@ -49,8 +49,8 @@ function ordemCrescente(a,b){
 function qualitativadiscreta(){
     tablequalitativa.innerHTML +="<tr> <td>VARIAVEL</td><td>FI</td><td>FR%   </td><td>FAC   </td><td>FAC%  </td></tr> "
     let nomeVar = document.getElementById('variavelquali').value; 
-    let dados = document.getElementById('valor').value; 
-    let vetDiscreta = dados.toString().split(';'); 
+    const dados = document.getElementById('valor').value; 
+    const vetDiscreta = dados.toString().split(';'); 
     vetDiscreta.sort(ordemCrescente) 
     let quantDados ={} ; 
     let acum =0 ; 
@@ -67,6 +67,14 @@ function qualitativadiscreta(){
     for(var chave in quantDados){ 
         tablequalitativa.innerHTML+= `<td> ${chave /*Inserção de variavel na tabela*/}  <td> ${quantDados[chave]/*Insere a quantidade de repetições da variavel*/} <td>${Math.round((quantDados[chave]/acum)*100) /*Insere e calcula a porcentagem de vezes que o elemento foi inserido*/} % <td> <br> `      
 }
+    //fazer media moda mediana
+    let ultimo = vetDiscreta[vetDiscreta.length - 1]
+    console.log(ultimo)
+    let ele1 = vetDiscreta[0]
+    console.log(ele1)
+}
+function mmmdiscreta(){
+    
 }
 function qualitativanominal(){
     tablequalitativa.innerHTML +="<tr> <td>VARIAVEL</td><td>FI</td><td>FR%   </td><td>FAC   </td><td>FAC%  </td></tr> "
