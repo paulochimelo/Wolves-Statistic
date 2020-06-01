@@ -69,7 +69,7 @@ let fap = 0
 let fapcont = 0
     for(var chave in quantDados){ 
         fac+=quantDados[chave]
-        fapcont += Math.round((quantDados[chave]/acum)*100)
+        fapcont = Math.round((quantDados[chave]/acum)*100)
         fap += fapcont
         tablequalitativa.innerHTML+= `<td> ${chave /*Inserção de variavel na tabela*/}  <td> ${quantDados[chave]/*Insere a quantidade de repetições da variavel*/} <td>${Math.round((quantDados[chave]/acum)*100) /*Insere e calcula a porcentagem de vezes que o elemento foi inserido*/} % <td> ${fac} <td> ${fap} % <br> `      
     }
