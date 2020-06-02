@@ -14,9 +14,9 @@ function qualitativa(){
         }
         }else if (tipodado == 'POPULAÇÃO'){
         if (tipoquali == 'DISCRETA'){
-            console.log('34')
+            qualinompopulacao()
         }else if (tipoquali == 'NOMINAL'){
-            console.log('64')
+            qualiordpopulacao()
         }
 }
 }
@@ -168,4 +168,13 @@ k = (Math.sqrt(k))
 let k2 = k.tofixed(0)
 
 alert(k2,k)
+}
+
+
+
+function qualinompopulacao(){
+
+}
+function qualiordpopulacao(){
+
 }
