@@ -129,7 +129,7 @@ function qualitativanominal(){
 
 function quantitativacontinua(){
         let nomeVar = document.getElementById('variavelquantitativa').value;
-        tablequantitativa.innerHTML += `<tr> <td> ${nomeVar} </td><td>Frequência Simples</td><td>Frequência Relativa</td><td>Frequência Acumulada</td><td>Frequência Acumulada Percentual</td></tr> `
+        tablequantitativa.innerHTML += `<tr> <td> Variavel   </td><td>Frequência Simples</td><td>Frequência Relativa</td><td>Frequência Acumulada</td><td>Frequência Acumulada Percentual</td></tr> `
         variavelquant.innerHTML+=nomeVar
 		let dados_continua = document.getElementById('valores').value;
 		let vetDiscreta = dados_continua.toString().split(';');
@@ -140,14 +140,12 @@ function quantitativacontinua(){
         let k =Math.sqrt(n);
         k=Math.floor(k)
         console.log(k)
-
         var ic = 0 ; 
         console.log(xmax+":"+xmin)
         console.log(k);
          var alt = xmax - xmin
          console.log(alt)
          ic = Math.floor(alt/k)
-        
            console.log(alt+ "/"+k+" = "+ic)
         var valorInicial = Number(xmin);
         console.log(`Antes do while ${valorInicial}:${xmax}`)
@@ -156,7 +154,7 @@ function quantitativacontinua(){
         var valorFinal = 0 ;
         valorFinal = Number(valorInicial + ic)
         console.log(`${valorInicial}:${valorFinal}:${xmax}`)
-        tablequantitativa.innerHTML+=`<td>${valorInicial}<td>|----<td>${valorFinal}<td>` 
+        tablequantitativa.innerHTML+=`<td>${valorInicial} |----  ${valorFinal}<td>` 
         var valorInicial = valorFinal
         }
     }
@@ -261,5 +259,3 @@ let fapcont = 0
     console.log(acum)
 }
 
-
-  
