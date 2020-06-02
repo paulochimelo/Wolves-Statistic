@@ -8,7 +8,7 @@ function qualitativa(){
 
     if (tipodado == 'AMOSTRA'){
         if (tipoquali == 'DISCRETA'){
-            qualitativadiscreta()
+            qualitativaordinal()
         }else if (tipoquali == 'NOMINAL'){
             qualitativanominal()
         }
@@ -46,7 +46,7 @@ function quantitativa(){
 function ordemCrescente(a,b){
     return(a-b)	
 }   
-function qualitativadiscreta(){
+function qualitativaordinal(){
     let nomeVar = document.getElementById('variavelqualitativa').value; 
     tablequalitativa.innerHTML += `<tr> <td>${nomeVar}  </td><td>Frequência Simples</td> <td>Frequência Relativa</td><td>Frequência Acumulada</td><td>Frequência Acumulada Percentual</td></tr> `
     const dados = document.getElementById('valor').value; 
