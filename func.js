@@ -93,7 +93,6 @@ let fapcont = 0
      //let mediana = vetDiscreta[m]
      //console.log(mediana)
      graficoordinal();
- 
  }
 
 
@@ -264,9 +263,11 @@ let fapcont = 0
 
 function graficoordinal() {
     var data = new google.visualization.DataTable();
-    data.addColumn('string', 'Topping');
-    data.addColumn('number', 'Slices');
-    data.addRows([['oi', 3]
+    data.addColumn('string', 'variavel');
+    data.addColumn('number', 'repetições');
+    data.addRows([
+    ['teste', 3],
+    ['erro', 1]
     ]);
     var options = {
     'legend':'left',

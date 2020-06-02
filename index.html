@@ -24,7 +24,7 @@
             <option value="DISCRETA"  id = "discreta">ORDINAL</option>
             <option value="NOMINAL"  id = "nominal">NOMINAL</option>
         </select>
-        <button type="button" onclick="qualitativa()">Teste</button>
+        <button type="button" onclick="qualitativa()">Calcular</button>
         <div >
             <table class="table" width="200px"  text-align: center table-layout: fixed margin-bottom : .5em id="variavelquali"><tr><strong><h1></h1></strong></tr></table>
             <table id="tablequalitativa" border="1" class="table" text-align: center table-layout: fixed margin-bottom : .5em>
@@ -39,7 +39,7 @@
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
       google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(graficoordinal);
+      
     </script>
     <div id = "grafico"></div>
 
@@ -57,7 +57,7 @@
             <option value="DISCRETA"  id = "discretaquant">DISCRETA</option>
             <option value="NOMINAL"  id = "nominalquant">CONTINUA</option>
         </select>
-        <button class="button" onclick="quantitativa()">Testar</button>
+        <button class="button" onclick="quantitativa()">Calcular</button>
         <div >
             <table id="variavelquant"><tr><strong><h1></h1></strong></tr></table>
             <table id="tablequantitativa" border="1">
