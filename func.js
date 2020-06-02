@@ -80,10 +80,9 @@ let fapcont = 0
     let ele1 = vetDiscreta[0]
     console.log(ele1)
     console.log(quantDados)
+    console.log(acum)
 }
-function mmmdiscreta(){
-    
-}
+
 function qualitativanominal(){
     let nomeVar = document.getElementById('variavelqualitativa').value;
     tablequalitativa.innerHTML +=`<tr> <td> ${nomeVar}      </td><td>Frequência Simples</td><td>Frequência Relativa</td><td>Frequência Acumulada</td><td>Frequência Acumulada Percentual</td></tr> `
