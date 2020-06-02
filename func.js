@@ -79,6 +79,7 @@ let fapcont = 0
     console.log(ultimo)
     let ele1 = vetDiscreta[0]
     console.log(ele1)
+    console.log(quantDados)
 }
 function mmmdiscreta(){
     
