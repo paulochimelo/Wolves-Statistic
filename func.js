@@ -104,14 +104,14 @@ function qualitativanominal(){
     }
     let fac =0;
     let acumFac = 0;
-    let factotPorc =0;
-    let acumFacPorc = 0; 
+    let fap = 0
+    let fapcont = 0
     for(var chave in quantDados){ 
        fac+=quantDados[chave]
-        facPorc = Math.round((quantDados[chave]/acum)*100)
-        factotPorc = fac + acumFacPorc
-        tablequalitativa.innerHTML+= `<td> ${chave}  <td> ${quantDados[chave]} <td>${Math.round((quantDados[chave]/acum)*100) } % <td> ${fac}<td> ${factotPorc} % <br> `
-        acumFacPorc+=facPorc
+       fapcont = Math.round((quantDados[chave]/acum)*100)
+       fap += fapcont
+        tablequalitativa.innerHTML+= `<td> ${chave}  <td> ${quantDados[chave]} <td>${Math.round((quantDados[chave]/acum)*100) } % <td> ${fac}<td> ${fap} % <br> `
+        
     }
 }
 
