@@ -51,8 +51,8 @@ function qualitativaordinal(){
     tablequalitativa.innerHTML += `<tr> <td>${nomeVar}  </td><td>Frequência Simples</td> <td>Frequência Relativa</td><td>Frequência Acumulada</td><td>Frequência Acumulada Percentual</td></tr> `
     const dados = document.getElementById('valor').value; 
     const vetDiscreta = dados.toString().split(';'); 
-    vetDiscreta.sort(ordemCrescente) 
-    let quantDados ={} ; 
+    vetDiscreta.sort() 
+    const quantDados ={} ; 
     let acum =0 ; 
     variavelquali.innerHTML+="Variavel Qualitativa Ordinal"
         for(let i = 0 ; i<vetDiscreta.length;i++){ 
@@ -79,8 +79,18 @@ let fapcont = 0
     console.log(ultimo)
     let ele1 = vetDiscreta[0]
     console.log(ele1)
-    console.log(quantDados)
+    console.log(vetDiscreta)
     console.log(acum)
+    if (acum & 1){
+        console.log("Impar")
+        let metade = Math.round(acum/2)
+        let m = Number(Math.round(metade))
+        console.log(m)
+    } else {
+        console.log("Par")
+    }
+    let mediana = vetDiscreta[m]
+    console.log(mediana)
 }
 
 function qualitativanominal(){
