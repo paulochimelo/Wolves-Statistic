@@ -129,6 +129,7 @@ function qualitativanominal(){
 
 function quantitativacontinua(){
         let nomeVar = document.getElementById('variavelquantitativa').value;
+        tablequantitativa.innerHTML += `<tr> <td> ${nomeVar} </td><td>Frequência Simples</td><td>Frequência Relativa</td><td>Frequência Acumulada</td><td>Frequência Acumulada Percentual</td></tr> `
         variavelquant.innerHTML+=nomeVar
 		let dados_continua = document.getElementById('valores').value;
 		let vetDiscreta = dados_continua.toString().split(';');
@@ -260,24 +261,5 @@ let fapcont = 0
     console.log(acum)
 }
 
-
-function graficoordinal() {
-    var data = new google.visualization.DataTable();
-    data.addColumn('string', 'variavel');
-    data.addColumn('number', 'repetições');
-    data.addRows([
-    ['teste', 3],
-    ['erro', 1]
-    ]);
-    var options = {
-    'legend':'left',
-    'title':'Gráfico',
-    'is3D':true,
-    'width':400,
-    'height':300
-    }
-    var chart = new google.visualization.PieChart(document.getElementById('grafico'));
-    chart.draw(data, options);
-    }
 
   
