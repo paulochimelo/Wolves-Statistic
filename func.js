@@ -14,9 +14,9 @@ function qualitativa(){
         }
         }else if (tipodado == 'POPULAÇÃO'){
         if (tipoquali == 'DISCRETA'){
-            qualinompopulacao()
-        }else if (tipoquali == 'NOMINAL'){
             qualiordpopulacao()
+        }else if (tipoquali == 'NOMINAL'){
+            qualinompopulacao()
         }
 }
 }
@@ -30,13 +30,13 @@ function quantitativa(){
 
     if (tipodados == 'AMOSTRA'){
         if (tipoquanti == 'DISCRETA'){
-            console.log('34')
+            quantitativadiscreta()
         }else if (tipoquanti == 'NOMINAL'){
             quantitativacontinua()
         }
         }else if (tipodados == 'POPULAÇÃO'){
         if (tipoquanti == 'DISCRETA'){
-            console.log('34')
+            quantitativadiscretapop()
         }else if (tipoquanti == 'NOMINAL'){
             console.log('64')
         }
@@ -130,7 +130,7 @@ function qualitativanominal(){
 function quantitativacontinua(){
         let nomeVar = document.getElementById('variavelquantitativa').value;
         tablequantitativa.innerHTML += `<tr> <td> Variavel   </td><td>Frequência Simples</td><td>Frequência Relativa</td><td>Frequência Acumulada</td><td>Frequência Acumulada Percentual</td></tr> `
-        variavelquant.innerHTML+=nomeVar
+        variavelquant.innerHTML+=('Variavel Quantitativa Continua')
 		let dados_continua = document.getElementById('valores').value;
 		let vetDiscreta = dados_continua.toString().split(';');
 		vetDiscreta.sort(ordemCrescente)
@@ -154,7 +154,7 @@ function quantitativacontinua(){
         var valorFinal = 0 ;
         valorFinal = Number(valorInicial + ic)
         console.log(`${valorInicial}:${valorFinal}:${xmax}`)
-        tablequantitativa.innerHTML+=`<td>${valorInicial} |----  ${valorFinal}<td>` 
+        tablequantitativa.innerHTML+=`<td>${valorInicial} |----  ${valorFinal}<td>   <td>   <td>   <td>` 
         var valorInicial = valorFinal
         }
     }
@@ -190,7 +190,7 @@ function qualinompopulacao(){
     vetDiscreta.sort(ordemCrescente) 
     let quantDados ={} ; 
     let acum =0 ; 
-    variavelquali.innerHTML+="Variavel Qualitativa Ordinal"
+    variavelquali.innerHTML+="Variavel Qualitativa Nominal População"
         for(let i = 0 ; i<vetDiscreta.length;i++){ 
             if(quantDados [vetDiscreta[i] ]){
                 quantDados[vetDiscreta[i]]+=1
@@ -230,7 +230,7 @@ function qualiordpopulacao(){
     vetDiscreta.sort(ordemCrescente) 
     let quantDados ={} ; 
     let acum =0 ; 
-    variavelquali.innerHTML+="Variavel Qualitativa Ordinal"
+    variavelquali.innerHTML+="Variavel Qualitativa Ordinal População"
         for(let i = 0 ; i<vetDiscreta.length;i++){ 
             if(quantDados [vetDiscreta[i] ]){
                 quantDados[vetDiscreta[i]]+=1
@@ -259,3 +259,60 @@ let fapcont = 0
     console.log(acum)
 }
 
+function quantitativadiscreta(){
+    let nomeVar = document.getElementById('variavelquantitativa').value
+    tablequantitativa.innerHTML += `<tr> <td>${nomeVar}  </td><td>Frequência Simples</td> <td>Frequência Relativa</td><td>Frequência Acumulada</td><td>Frequência Acumulada Percentual</td></tr> `
+    const dados = document.getElementById('valores').value; 
+    const vetdiscreta = dados.toString().split(';'); 
+    vetdiscreta.sort() 
+    const quantDados ={} ; 
+    let acum =0 ; 
+    variavelquant.innerHTML+="Variavel Quantitativa Discreta"
+        for(let i = 0 ; i<vetdiscreta.length;i++){ 
+            if(quantDados [vetdiscreta[i] ]){
+                quantDados[vetdiscreta[i]]+=1
+                acum++
+            }else{
+                quantDados[vetdiscreta[i]]=1
+                acum++
+            }			
+    }
+let fac = 0
+let fap = 0
+let fapcont = 0
+    for(var chave in quantDados){ 
+        fac+=quantDados[chave]
+        fapcont = Math.round((quantDados[chave]/acum)*100)
+        fap += fapcont
+        tablequantitativa.innerHTML+= `<td> ${chave /*Inserção de variavel na tabela*/}  <td> ${quantDados[chave]/*Insere a quantidade de repetições da variavel*/} <td>${Math.round((quantDados[chave]/acum)*100) /*Insere e calcula a porcentagem de vezes que o elemento foi inserido*/} % <td> ${fac} <td> ${fap} % <br> `      
+    }
+}
+
+function quantitativadiscretapop(){
+    let nomeVar = document.getElementById('variavelquantitativa').value
+    tablequantitativa.innerHTML += `<tr> <td>${nomeVar}  </td><td>Frequência Simples</td> <td>Frequência Relativa</td><td>Frequência Acumulada</td><td>Frequência Acumulada Percentual</td></tr> `
+    const dados = document.getElementById('valores').value; 
+    const vetdiscreta = dados.toString().split(';'); 
+    vetdiscreta.sort() 
+    const quantDados ={} ; 
+    let acum =0 ; 
+    variavelquant.innerHTML+="Variavel Quantitativa Discreta População"
+        for(let i = 0 ; i<vetdiscreta.length;i++){ 
+            if(quantDados [vetdiscreta[i] ]){
+                quantDados[vetdiscreta[i]]+=1
+                acum++
+            }else{
+                quantDados[vetdiscreta[i]]=1
+                acum++
+            }			
+    }
+let fac = 0
+let fap = 0
+let fapcont = 0
+    for(var chave in quantDados){ 
+        fac+=quantDados[chave]
+        fapcont = Math.round((quantDados[chave]/acum)*100)
+        fap += fapcont
+        tablequantitativa.innerHTML+= `<td> ${chave /*Inserção de variavel na tabela*/}  <td> ${quantDados[chave]/*Insere a quantidade de repetições da variavel*/} <td>${Math.round((quantDados[chave]/acum)*100) /*Insere e calcula a porcentagem de vezes que o elemento foi inserido*/} % <td> ${fac} <td> ${fap} % <br> `      
+    }
+}
