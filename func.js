@@ -52,7 +52,7 @@ function qualitativaordinal(){
     const dados = document.getElementById('valor').value; 
     const vetDiscreta = dados.toString().split(';'); 
     vetDiscreta.sort() 
-    let quantDados ={} ; 
+    const quantDados ={} ; 
     let acum =0 ; 
     variavelquali.innerHTML+="Variavel Qualitativa Ordinal"
         for(let i = 0 ; i<vetDiscreta.length;i++){ 
