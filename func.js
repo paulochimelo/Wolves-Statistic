@@ -173,8 +173,78 @@ alert(k2,k)
 
 
 function qualinompopulacao(){
+    let nomeVar = document.getElementById('variavelqualitativa').value; 
+    tablequalitativa.innerHTML += `<tr> <td>${nomeVar}  </td><td>Frequência Simples</td> <td>Frequência Relativa</td><td>Frequência Acumulada</td><td>Frequência Acumulada Percentual</td></tr> `
+    const dados = document.getElementById('valor').value; 
+    const vetDiscreta = dados.toString().split(';'); 
+    vetDiscreta.sort(ordemCrescente) 
+    let quantDados ={} ; 
+    let acum =0 ; 
+    variavelquali.innerHTML+="Variavel Qualitativa Ordinal"
+        for(let i = 0 ; i<vetDiscreta.length;i++){ 
+            if(quantDados [vetDiscreta[i] ]){
+                quantDados[vetDiscreta[i]]+=1
+                acum++
+            }else{
+                quantDados[vetDiscreta[i]]=1
+                acum++
+            }			
+    }
+let fac = 0
+let fap = 0
+let fapcont = 0
+    for(var chave in quantDados){ 
+        fac+=quantDados[chave]
+        fapcont = Math.round((quantDados[chave]/acum)*100)
+        fap += fapcont
+        tablequalitativa.innerHTML+= `<td> ${chave /*Inserção de variavel na tabela*/}  <td> ${quantDados[chave]/*Insere a quantidade de repetições da variavel*/} <td>${Math.round((quantDados[chave]/acum)*100) /*Insere e calcula a porcentagem de vezes que o elemento foi inserido*/} % <td> ${fac} <td> ${fap} % <br> `      
+    }
+
+    //fazer media moda mediana
+    let ultimo = vetDiscreta[vetDiscreta.length - 1]
+    console.log(ultimo)
+    let ele1 = vetDiscreta[0]
+    console.log(ele1)
+    console.log(quantDados)
+    console.log(acum)
+
+
+
 
 }
 function qualiordpopulacao(){
+    let nomeVar = document.getElementById('variavelqualitativa').value; 
+    tablequalitativa.innerHTML += `<tr> <td>${nomeVar}  </td><td>Frequência Simples</td> <td>Frequência Relativa</td><td>Frequência Acumulada</td><td>Frequência Acumulada Percentual</td></tr> `
+    const dados = document.getElementById('valor').value; 
+    const vetDiscreta = dados.toString().split(';'); 
+    vetDiscreta.sort(ordemCrescente) 
+    let quantDados ={} ; 
+    let acum =0 ; 
+    variavelquali.innerHTML+="Variavel Qualitativa Ordinal"
+        for(let i = 0 ; i<vetDiscreta.length;i++){ 
+            if(quantDados [vetDiscreta[i] ]){
+                quantDados[vetDiscreta[i]]+=1
+                acum++
+            }else{
+                quantDados[vetDiscreta[i]]=1
+                acum++
+            }			
+    }
+let fac = 0
+let fap = 0
+let fapcont = 0
+    for(var chave in quantDados){ 
+        fac+=quantDados[chave]
+        fapcont = Math.round((quantDados[chave]/acum)*100)
+        fap += fapcont
+        tablequalitativa.innerHTML+= `<td> ${chave /*Inserção de variavel na tabela*/}  <td> ${quantDados[chave]/*Insere a quantidade de repetições da variavel*/} <td>${Math.round((quantDados[chave]/acum)*100) /*Insere e calcula a porcentagem de vezes que o elemento foi inserido*/} % <td> ${fac} <td> ${fap} % <br> `      
+    }
 
+    //fazer media moda mediana
+    let ultimo = vetDiscreta[vetDiscreta.length - 1]
+    console.log(ultimo)
+    let ele1 = vetDiscreta[0]
+    console.log(ele1)
+    console.log(quantDados)
+    console.log(acum)
 }
