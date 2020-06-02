@@ -89,10 +89,12 @@ let fapcont = 0
          console.log(m)
      } else {
          console.log("Par")
+         let metade = Math.round(acum/2)
+         let m = Number(Math.round(metade))
+         console.log(m)
      }
      //let mediana = vetDiscreta[m]
      //console.log(mediana)
-     graficoordinal();
  }
 
 
@@ -127,7 +129,7 @@ function qualitativanominal(){
 }
 
 
-function quantitativacontinua(){
+/*function quantitativacontinua(){
         let nomeVar = document.getElementById('variavelquantitativa').value;
         tablequantitativa.innerHTML += `<tr> <td> Variavel   </td><td>Frequência Simples</td><td>Frequência Relativa</td><td>Frequência Acumulada</td><td>Frequência Acumulada Percentual</td></tr> `
         variavelquant.innerHTML+=('Variavel Quantitativa Continua')
@@ -154,11 +156,11 @@ function quantitativacontinua(){
         var valorFinal = 0 ;
         valorFinal = Number(valorInicial + ic)
         console.log(`${valorInicial}:${valorFinal}:${xmax}`)
-        tablequantitativa.innerHTML+=`<td>${valorInicial} |----  ${valorFinal}<td>   <td>   <td>   <td>` 
+        tablequantitativa.innerHTML+=`<td>${valorInicial} |----  ${valorFinal}<td> undefined <td> undefined <td> undefined <td> unfedined </td></td>` 
         var valorInicial = valorFinal
         }
     }
-
+*/
 
 function Crescente(a,b){
     return(a-b)
