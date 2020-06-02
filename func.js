@@ -74,24 +74,28 @@ let fapcont = 0
         tablequalitativa.innerHTML+= `<td> ${chave /*Inserção de variavel na tabela*/}  <td> ${quantDados[chave]/*Insere a quantidade de repetições da variavel*/} <td>${Math.round((quantDados[chave]/acum)*100) /*Insere e calcula a porcentagem de vezes que o elemento foi inserido*/} % <td> ${fac} <td> ${fap} % <br> `      
     }
 
-    //fazer media moda mediana
-    let ultimo = vetDiscreta[vetDiscreta.length - 1]
-    console.log(ultimo)
-    let ele1 = vetDiscreta[0]
-    console.log(ele1)
-    console.log(vetDiscreta)
-    console.log(acum)
-    if (acum & 1){
-        console.log("Impar")
-        let metade = Math.round(acum/2)
-        let m = Number(Math.round(metade))
-        console.log(m)
-    } else {
-        console.log("Par")
-    }
-    let mediana = vetDiscreta[m]
-    console.log(mediana)
-}
+     //fazer media moda mediana
+     let ultimo = vetDiscreta[vetDiscreta.length - 1]
+     console.log(ultimo)
+     console.log(ultimo);
+     let ele1 = vetDiscreta[0]
+     console.log(ele1)
+     console.log(vetDiscreta)
+     console.log(acum)
+     if (acum & 1){
+         console.log("Impar")
+         let metade = Math.round(acum/2)
+         let m = Number(Math.round(metade))
+         console.log(m)
+     } else {
+         console.log("Par")
+     }
+     //let mediana = vetDiscreta[m]
+     //console.log(mediana)
+     graficoordinal();
+ 
+ }
+
 
 function qualitativanominal(){
     let nomeVar = document.getElementById('variavelqualitativa').value;
@@ -120,10 +124,8 @@ function qualitativanominal(){
        fapcont = Math.round((quantDados[chave]/acum)*100)
        fap += fapcont
         tablequalitativa.innerHTML+= `<td> ${chave}  <td> ${quantDados[chave]} <td>${Math.round((quantDados[chave]/acum)*100) } % <td> ${fac}<td> ${fap} % <br> `
-        
     }
 }
-
 
 
 function quantitativacontinua(){
@@ -258,3 +260,23 @@ let fapcont = 0
     console.log(quantDados)
     console.log(acum)
 }
+
+
+function graficoordinal() {
+    var data = new google.visualization.DataTable();
+    data.addColumn('string', 'Topping');
+    data.addColumn('number', 'Slices');
+    data.addRows([['oi', 3]
+    ]);
+    var options = {
+    'legend':'left',
+    'title':'Gráfico',
+    'is3D':true,
+    'width':400,
+    'height':300
+    }
+    var chart = new google.visualization.PieChart(document.getElementById('grafico'));
+    chart.draw(data, options);
+    }
+
+  
