@@ -127,6 +127,27 @@ function qualitativanominal(){
        fap += fapcont
         tablequalitativa.innerHTML+= `<td> ${chave}  <td> ${quantDados[chave]} <td>${Math.round((quantDados[chave]/acum)*100) } % <td> ${fac}<td> ${fap} % <br> `
     }
+     //fazer media moda mediana
+     let ultimo = vetNominal[vetNominal.length - 1]
+     console.log(ultimo)
+     console.log(ultimo);
+     let ele1 = vetNominal[0]
+     console.log(ele1)
+     console.log(vetNominal)
+     console.log(acum)
+     let m = Math.round(acum/2)
+     if (acum & 1){
+        console.log("Impar")
+        console.log(m)
+        console.log("Media: Não Possui")
+        console.log(`Mediana:${vetNominal[m-1]}`)
+     } else {
+         console.log("Par")
+         console.log(m)
+         let mediana = (vetNominal[m-1] + vetNominal[m]) /2
+         console.log(`Mediana:${vetNominal[m-1]} ; ${vetNominal[m]}`)
+         console.log("Media: Não Possui")
+     }
 }
 
 
