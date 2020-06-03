@@ -89,12 +89,14 @@ let fapcont = 0
          console.log(m)
      } else {
          console.log("Par")
-         let metade = Math.round(acum/2)
-         let m = Number(Math.round(metade))
+         let m = Math.round(acum/2)
          console.log(m)
+         let mediana = vetDiscreta[m]
      }
+     
      //let mediana = vetDiscreta[m]
      //console.log(mediana)
+     console.log(mediana)
  }
 
 
