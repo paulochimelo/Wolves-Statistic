@@ -251,7 +251,7 @@ function qualiordpopulacao(){
     tablequalitativa.innerHTML += `<tr> <td>${nomeVar}  </td><td>Frequência Simples</td> <td>Frequência Relativa</td><td>Frequência Acumulada</td><td>Frequência Acumulada Percentual</td></tr> `
     const dados = document.getElementById('valor').value; 
     const vetDiscreta = dados.toString().split(';'); 
-    vetDiscreta.sort(ordemCrescente) 
+    vetDiscreta.sort() 
     let quantDados ={} ; 
     let acum =0 ; 
     variavelquali.innerHTML+="Variavel Qualitativa Ordinal População"
@@ -288,7 +288,7 @@ function quantitativadiscreta(){
     tablequantitativa.innerHTML += `<tr> <td>${nomeVar}  </td><td>Frequência Simples</td> <td>Frequência Relativa</td><td>Frequência Acumulada</td><td>Frequência Acumulada Percentual</td></tr> `
     let dados = document.getElementById('valores').value; 
     let vetdiscreta = dados.toString().split(';'); 
-    vetdiscreta.sort() 
+    vetdiscreta.sort(ordemCrescente) 
     let quantDados ={} ; 
     let acum =0 ; 
     variavelquant.innerHTML+="Variavel Quantitativa Discreta"
@@ -340,7 +340,7 @@ function quantitativadiscretapop(){
     tablequantitativa.innerHTML += `<tr> <td>${nomeVar}  </td><td>Frequência Simples</td> <td>Frequência Relativa</td><td>Frequência Acumulada</td><td>Frequência Acumulada Percentual</td></tr> `
     let dados = document.getElementById('valores').value; 
     let vetdiscreta = dados.toString().split(';'); 
-    vetdiscreta.sort() 
+    vetdiscreta.sort(ordemCrescente) 
     let quantDados ={} ; 
     let acum =0 ; 
     variavelquant.innerHTML+="Variavel Quantitativa Discreta População"
