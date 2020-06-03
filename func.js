@@ -333,6 +333,15 @@ let fapcont = 0
          console.log(`Mediana:${mediana}`)
          console.log("Media: ")
      }
+     // Soma dos valores totais, alterando o vetdiscreta para um novo vetor com dados em number
+     // e somando todo o vetor
+     let vetordados =  vetdiscreta
+     parseInt(vetordados)
+     var total = 0;
+     for( var i in vetordados){
+     total += vetordados[i];
+     }
+     console.log(`soma: ${total}`)
 }
 
 function quantitativadiscretapop(){
