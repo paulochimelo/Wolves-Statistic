@@ -286,10 +286,10 @@ let fapcont = 0
 function quantitativadiscreta(){
     let nomeVar = document.getElementById('variavelquantitativa').value
     tablequantitativa.innerHTML += `<tr> <td>${nomeVar}  </td><td>Frequência Simples</td> <td>Frequência Relativa</td><td>Frequência Acumulada</td><td>Frequência Acumulada Percentual</td></tr> `
-    const dados = document.getElementById('valores').value; 
-    const vetdiscreta = dados.toString().split(';'); 
+    let dados = document.getElementById('valores').value; 
+    let vetdiscreta = dados.toString().split(';'); 
     vetdiscreta.sort() 
-    const quantDados ={} ; 
+    let quantDados ={} ; 
     let acum =0 ; 
     variavelquant.innerHTML+="Variavel Quantitativa Discreta"
         for(let i = 0 ; i<vetdiscreta.length;i++){ 
@@ -310,15 +310,36 @@ let fapcont = 0
         fap += fapcont
         tablequantitativa.innerHTML+= `<td> ${chave /*Inserção de variavel na tabela*/}  <td> ${quantDados[chave]/*Insere a quantidade de repetições da variavel*/} <td>${Math.round((quantDados[chave]/acum)*100) /*Insere e calcula a porcentagem de vezes que o elemento foi inserido*/} % <td> ${fac} <td> ${fap} % <br> `      
     }
+     //fazer media moda mediana
+     let ultimo = vetdiscreta[vetdiscreta.length - 1]
+     console.log(ultimo)
+     console.log(ultimo);
+     let ele1 = vetdiscreta[0]
+     console.log(ele1)
+     console.log(vetdiscreta)
+     console.log(acum)
+     let m = Math.round(acum/2)
+     if (acum & 1){
+        console.log("Impar")
+        console.log(m)
+        console.log("Media: ")
+        console.log(`Mediana:${vetdiscreta[m-1]}`)
+     } else {
+         console.log("Par")
+         console.log(m)
+         let mediana = (vetdiscreta[m-1] + vetdiscreta[m]) /2
+         console.log(`Mediana:${vetdiscreta[m-1]} ; ${vetdiscreta[m]}`)
+         console.log("Media: ")
+     }
 }
 
 function quantitativadiscretapop(){
     let nomeVar = document.getElementById('variavelquantitativa').value
     tablequantitativa.innerHTML += `<tr> <td>${nomeVar}  </td><td>Frequência Simples</td> <td>Frequência Relativa</td><td>Frequência Acumulada</td><td>Frequência Acumulada Percentual</td></tr> `
-    const dados = document.getElementById('valores').value; 
-    const vetdiscreta = dados.toString().split(';'); 
+    let dados = document.getElementById('valores').value; 
+    let vetdiscreta = dados.toString().split(';'); 
     vetdiscreta.sort() 
-    const quantDados ={} ; 
+    let quantDados ={} ; 
     let acum =0 ; 
     variavelquant.innerHTML+="Variavel Quantitativa Discreta População"
         for(let i = 0 ; i<vetdiscreta.length;i++){ 
@@ -339,4 +360,25 @@ let fapcont = 0
         fap += fapcont
         tablequantitativa.innerHTML+= `<td> ${chave /*Inserção de variavel na tabela*/}  <td> ${quantDados[chave]/*Insere a quantidade de repetições da variavel*/} <td>${Math.round((quantDados[chave]/acum)*100) /*Insere e calcula a porcentagem de vezes que o elemento foi inserido*/} % <td> ${fac} <td> ${fap} % <br> `      
     }
+         //fazer media moda mediana
+         let ultimo = vetdiscreta[vetdiscreta.length - 1]
+         console.log(ultimo)
+         console.log(ultimo);
+         let ele1 = vetdiscreta[0]
+         console.log(ele1)
+         console.log(vetdiscreta)
+         console.log(acum)
+         let m = Math.round(acum/2)
+         if (acum & 1){
+            console.log("Impar")
+            console.log(m)
+            console.log("Media: ")
+            console.log(`Mediana:${vetdiscreta[m-1]}`)
+         } else {
+             console.log("Par")
+             console.log(m)
+             let mediana = (vetdiscreta[m-1] + vetdiscreta[m]) /2
+             console.log(`Mediana:${vetdiscreta[m-1]} ; ${vetdiscreta[m]}`)
+             console.log("Media: ")
+         }
 }
