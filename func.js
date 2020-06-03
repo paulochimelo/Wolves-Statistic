@@ -86,12 +86,14 @@ let fapcont = 0
      if (acum & 1){
         console.log("Impar")
         console.log(m)
+        console.log("Media: Não Possui")
         console.log(`Mediana:${vetDiscreta[m-1]}`)
      } else {
          console.log("Par")
          console.log(m)
          let mediana = (vetDiscreta[m-1] + vetDiscreta[m]) /2
-         console.log(`Mediana:${mediana}`)
+         console.log(`Mediana:${vetDiscreta[m-1]} ; ${vetDiscreta[m]}`)
+         console.log("Media: Não Possui")
      }
      
  }
