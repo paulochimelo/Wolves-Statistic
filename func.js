@@ -82,21 +82,17 @@ let fapcont = 0
      console.log(ele1)
      console.log(vetDiscreta)
      console.log(acum)
+     let m = Math.round(acum/2)
      if (acum & 1){
-         console.log("Impar")
-         let metade = Math.round(acum/2)
-         let m = Number(Math.round(metade))
-         console.log(m)
+        console.log("Par")
+        console.log(m)
+        console.log(`Mediana:${vetDiscreta[m-1]}`)
      } else {
          console.log("Par")
-         let m = Math.round(acum/2)
          console.log(m)
-         let mediana = vetDiscreta[m]
+         console.log(`Mediana:${vetDiscreta[m-1]}`)
      }
      
-     //let mediana = vetDiscreta[m]
-     //console.log(mediana)
-     console.log(mediana)
  }
 
 
