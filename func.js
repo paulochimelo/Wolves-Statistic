@@ -84,13 +84,13 @@ let fapcont = 0
      console.log(acum)
      let m = Math.round(acum/2)
      if (acum & 1){
-        console.log("Par")
+        console.log("Impar")
         console.log(m)
         console.log(`Mediana:${vetDiscreta[m-1]}`)
      } else {
          console.log("Par")
          console.log(m)
-         console.log(`Mediana:${vetDiscreta[m-1]}`)
+         console.log(`Mediana:${vetDiscreta[m-1]}, ${vetDiscreta[m]}`)
      }
      
  }
