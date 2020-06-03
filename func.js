@@ -90,7 +90,8 @@ let fapcont = 0
      } else {
          console.log("Par")
          console.log(m)
-         console.log(`Mediana:${vetDiscreta[m-1]}, ${vetDiscreta[m]}`)
+         let mediana = (vetDiscreta[m-1] + vetDiscreta[m]) /2
+         console.log(`Mediana:${mediana}`)
      }
      
  }
