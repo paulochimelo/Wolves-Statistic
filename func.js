@@ -327,8 +327,8 @@ let fapcont = 0
      } else {
          console.log("Par")
          console.log(m)
-         let m1 = Number(vetdiscreta[m])
-         let m2 = Number(vetdiscreta[m+1])
+         let m1 = Number(vetdiscreta[m-1])
+         let m2 = Number(vetdiscreta[m])
          let mediana = Number(m1+m2) /2
          console.log(`Mediana:${mediana}`)
          console.log("Media: ")
@@ -379,8 +379,8 @@ let fapcont = 0
          } else {
             console.log("Par")
             console.log(m)
-            let m1 = Number(vetdiscreta[m])
-            let m2 = Number(vetdiscreta[m+1])
+            let m1 = Number(vetdiscreta[m-1])
+            let m2 = Number(vetdiscreta[m])
             let mediana = Number(m1+m2) /2
             console.log(`Mediana:${mediana}`)
             console.log("Media: ")
