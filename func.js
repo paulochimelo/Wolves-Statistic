@@ -59,9 +59,11 @@ function qualitativaordinal(){
             if(quantDados [vetDiscreta[i] ]){
                 quantDados[vetDiscreta[i]]+=1
                 acum++
+
             }else{
                 quantDados[vetDiscreta[i]]=1
                 acum++
+ 
             }			
     }
 let fac = 0
@@ -70,12 +72,25 @@ let fapcont = 0
     for(var chave in quantDados){ 
         fac+=quantDados[chave]
         fapcont = Math.round((quantDados[chave]/acum)*100)
-        fap += fapcont
-        tablequalitativa.innerHTML+= `<td> ${chave /*Inserção de variavel na tabela*/}  <td> ${quantDados[chave]/*Insere a quantidade de repetições da variavel*/} <td>${Math.round((quantDados[chave]/acum)*100) /*Insere e calcula a porcentagem de vezes que o elemento foi inserido*/} % <td> ${fac} <td> ${fap} % <br> `      
+        fap += fapcont 
+        tablequalitativa.innerHTML+= `<td> ${chave /*Inserção de variavel na tabela*/}  <td> ${quantDados[chave]/*Insere a quantidade de repetições da variavel*/} <td>${Math.round((quantDados[chave]/acum)*100) /*Insere e calcula a porcentagem de vezes que o elemento foi inserido*/} % <td> ${fac} <td> ${fap} % <br> ` 
+          
     }
-
      //fazer media moda mediana
-     let ultimo = vetDiscreta[vetDiscreta.length - 1]
+     let moda = null
+     let ocorrenciasMaior = -1;
+ 
+     let contagem = 1;
+     for ( let i = 1 ; i <= vetDiscreta.length ; i++ ) {
+     if ( i < vetDiscreta.length && vetDiscreta[i] == vetDiscreta[i-contagem] )
+         contagem++;
+     
+     else if ( contagem > ocorrenciasMaior ) {
+         moda = vetDiscreta[i-1];
+         ocorrenciasMaior = contagem;
+     }
+     }
+    let ultimo = vetDiscreta[vetDiscreta.length - 1]
      console.log(ultimo)
      console.log(ultimo);
      let ele1 = vetDiscreta[0]
@@ -95,7 +110,7 @@ let fapcont = 0
          console.log(`Mediana:${vetDiscreta[m-1]} ; ${vetDiscreta[m]}`)
          console.log("Media: Não Possui")
      }
-     
+    console.log(`Moda : ${moda}`)
  }
 
 
@@ -128,6 +143,19 @@ function qualitativanominal(){
         tablequalitativa.innerHTML+= `<td> ${chave}  <td> ${quantDados[chave]} <td>${Math.round((quantDados[chave]/acum)*100) } % <td> ${fac}<td> ${fap} % <br> `
     }
      //fazer media moda mediana
+     let moda = null
+     let ocorrenciasMaior = -1;
+ 
+     let contagem = 1;
+     for ( let i = 1 ; i <= vetNominal.length ; i++ ) {
+     if ( i < vetNominal.length && vetNominal[i] == vetNominal[i-contagem] )
+         contagem++;
+     
+     else if ( contagem > ocorrenciasMaior ) {
+         moda = vetNominal[i-1];
+         ocorrenciasMaior = contagem;
+     }
+     }
      let ultimo = vetNominal[vetNominal.length - 1]
      console.log(ultimo)
      console.log(ultimo);
@@ -148,6 +176,7 @@ function qualitativanominal(){
          console.log(`Mediana:${vetNominal[m-1]} ; ${vetNominal[m]}`)
          console.log("Media: Não Possui")
      }
+     console.log(`Moda : ${moda}`)
 }
 
 
