@@ -352,7 +352,6 @@ let fapcont = 0
          moda = vetdiscreta[i-1];
          ocorrenciasMaior = contagem;
      }
-     console.log(`Moda: ${moda}`)
      }
      let ultimo = vetdiscreta[vetdiscreta.length - 1]
      console.log(ultimo)
@@ -376,6 +375,7 @@ let fapcont = 0
          console.log(`Mediana:${mediana}`)
          console.log("Media: ")
      }
+     console.log(`Moda: ${moda}`)
 
     
 
@@ -432,7 +432,7 @@ function quantitativadiscretapop(){
              moda = vetdiscreta[i-1];
              ocorrenciasMaior = contagem;
          }
-         console.log(`Moda: ${moda}`)
+         
          }
          let ultimo = vetdiscreta[vetdiscreta.length - 1]
          console.log(ultimo)
@@ -441,7 +441,6 @@ function quantitativadiscretapop(){
          console.log(ele1)
          console.log(vetdiscreta)
          console.log(acum)
-         console.log(`Moda: ${moda}`)
          console.log("teste")
          let m = Math.round(acum/2)
          if (acum & 1){
@@ -458,5 +457,6 @@ function quantitativadiscretapop(){
             console.log(`Mediana:${mediana}`)
             console.log("Media: ")
          }
+         console.log(`Moda: ${moda}`)
 
 }
