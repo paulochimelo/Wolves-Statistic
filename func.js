@@ -340,6 +340,20 @@ let fapcont = 0
         tablequantitativa.innerHTML+= `<td> ${chave /*Inserção de variavel na tabela*/}  <td> ${quantDados[chave]/*Insere a quantidade de repetições da variavel*/} <td>${Math.round((quantDados[chave]/acum)*100) /*Insere e calcula a porcentagem de vezes que o elemento foi inserido*/} % <td> ${fac} <td> ${fap} % <br> `      
     }
      //fazer media moda mediana
+     let moda = null
+     let ocorrenciasMaior = -1;
+ 
+     let contagem = 1;
+     for ( let i = 1 ; i <= vetdiscreta.length ; i++ ) {
+     if ( i < vetdiscreta.length && vetdiscreta[i] == vetdiscreta[i-contagem] )
+         contagem++;
+     
+     else if ( contagem > ocorrenciasMaior ) {
+         moda = vetdiscreta[i-1];
+         ocorrenciasMaior = contagem;
+     }
+     console.log(`Moda: ${moda}`)
+     }
      let ultimo = vetdiscreta[vetdiscreta.length - 1]
      console.log(ultimo)
      console.log(ultimo);
@@ -362,6 +376,10 @@ let fapcont = 0
          console.log(`Mediana:${mediana}`)
          console.log("Media: ")
      }
+
+    
+
+
      // Soma dos valores totais, alterando o vetdiscreta para um novo vetor com dados em number
      // e somando todo o vetor
      let vetordados =  vetdiscreta
@@ -371,6 +389,7 @@ let fapcont = 0
      total += vetordados[i];
      }
      console.log(`soma: ${total}`)
+     
 }
 
 function quantitativadiscretapop(){
@@ -391,9 +410,9 @@ function quantitativadiscretapop(){
                 acum++
             }			
     }
-let fac = 0
-let fap = 0
-let fapcont = 0
+    let fac = 0
+    let fap = 0
+    let fapcont = 0
     for(var chave in quantDados){ 
         fac+=quantDados[chave]
         fapcont = Math.round((quantDados[chave]/acum)*100)
@@ -401,6 +420,20 @@ let fapcont = 0
         tablequantitativa.innerHTML+= `<td> ${chave /*Inserção de variavel na tabela*/}  <td> ${quantDados[chave]/*Insere a quantidade de repetições da variavel*/} <td>${Math.round((quantDados[chave]/acum)*100) /*Insere e calcula a porcentagem de vezes que o elemento foi inserido*/} % <td> ${fac} <td> ${fap} % <br> `      
     }
          //fazer media moda mediana
+         let moda = 0
+         let ocorrenciasMaior = -1;
+     
+         let contagem = 1;
+         for ( let i = 1 ; i <= vetdiscreta.length ; i++ ) {
+         if ( i < vetdiscreta.length && vetdiscreta[i] == vetdiscreta[i-contagem] )
+             contagem++;
+         
+         else if ( contagem > ocorrenciasMaior ) {
+             moda = vetdiscreta[i-1];
+             ocorrenciasMaior = contagem;
+         }
+         console.log(`Moda: ${moda}`)
+         }
          let ultimo = vetdiscreta[vetdiscreta.length - 1]
          console.log(ultimo)
          console.log(ultimo);
@@ -408,6 +441,8 @@ let fapcont = 0
          console.log(ele1)
          console.log(vetdiscreta)
          console.log(acum)
+         console.log(`Moda: ${moda}`)
+         console.log("teste")
          let m = Math.round(acum/2)
          if (acum & 1){
             console.log("Impar")
@@ -423,4 +458,5 @@ let fapcont = 0
             console.log(`Mediana:${mediana}`)
             console.log("Media: ")
          }
+
 }
