@@ -1,0 +1,53 @@
+.container{
+    background-color: #343a40;
+    max-width: 100% !important;
+}
+
+.Tit{
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    padding-top: 120px;
+}
+
+.Tipos{
+    height: 449px;
+    flex-direction: column;
+    padding-top: 100px;
+    display: flex;
+    padding-right: 20px;
+    padding-left: -20px;
+}
+
+.row{
+    max-width: 100% !important;
+}
+
+.card{
+    background-color: #343a40 !important;
+    box-shadow: 0 5px 15px #17a2b8;
+
+   
+}
+
+.tit-cal{
+    font-weight: bold !important;
+    text-align: center;
+    color: #fff;
+}
+
+.subtit{
+    text-align: center;
+    color: #fff;
+}
+
+.info-cal{
+    text-align: center;
+    color: #fff;
+}
+
+.btnC{
+    margin-left: 35%;
+    font-weight: bold !important;
+    font-size: 18px !important;
+}

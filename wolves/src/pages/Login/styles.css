@@ -1,0 +1,41 @@
+.login{
+    background-color: #343a40;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.form{
+    width: 300px;
+}
+
+.form-tit{
+    color: #fff;
+    font-weight: bold;
+}
+
+.form-login{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.input-form{
+    box-shadow: 0 5px 15px #17a2b8;
+    background-color: #343a40 !important;
+    font-weight: bold !important;
+}
+
+.check-form{
+    color: #fff;
+}
+
+h1{
+    padding-bottom: 20px;
+    font-size: 36px !important;
+    margin-bottom: 20px;
+    color: #fff;
+    font-weight: bold;
+}

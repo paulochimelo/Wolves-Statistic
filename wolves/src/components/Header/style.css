@@ -1,0 +1,40 @@
+.logoH{
+    flex-direction: column;
+    display: flex;
+}
+
+.titL{
+    color: white !important;
+    font-size: 25px !important;
+    padding-left: 1px !important;
+    font-weight: bold;
+    float: right;
+    margin-left: 10px;
+}
+
+.linkP{
+    font-size: 18px !important;
+    font-weight: bold;
+}
+
+.btnH{
+    width: 120px !important;
+    height: 40px !important;
+    font-weight: bold !important;
+}
+
+.links{
+    margin-right: auto;
+    margin-left: auto;
+    margin-right: 15px;
+}
+
+.back-link{
+    text-decoration: none !important;
+    color: inherit;
+
+}
+
+.back-link:hover{
+    color: #ffffffbf;
+}

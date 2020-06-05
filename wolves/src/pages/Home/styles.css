@@ -1,0 +1,109 @@
+.container{
+    background-color: #343a40;
+    max-width: 100% !important;
+}
+
+.Colum{
+    padding-left: 80px;
+    float: left;
+}
+
+.Colum-inter{
+    padding-right: 80px;
+    padding-left: 80px;
+}
+
+.Colum-func{
+    padding-left: 80px;
+}
+
+.titlI{
+    padding-bottom: 25px;
+}
+
+.textI{
+    padding-bottom: 30px;
+}
+
+.infoJb{
+    background-color: transparent !important;
+    max-width: 500px;
+    font-size: 18px;
+    margin-top: 60px;
+}
+
+.infoJb-inter{
+    max-width: 500px;
+    background-color: transparent !important;
+    font-size: 18px;
+    margin-top: 100px;
+}
+
+.infoJb-func{
+    background-color: transparent !important;
+    max-width: 500px;
+    font-size: 18px;
+    margin-top: 120px;
+}
+
+.infoT{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.btn-info{
+    width: 150px !important;
+    height: 50px !important;
+    font-weight: bold !important;
+}
+
+.info-inter{
+    float: right;
+    font-size: 18px;
+}
+
+.info-func{
+    float: left;
+    font-size: 18px;
+}
+
+.soft{
+    height: 600px;
+    flex-direction: column;
+    margin-top: 45px;
+}
+
+.interface{
+    flex-direction: column;
+    background-color: #e9ecef;
+    margin-left: -15px !important;
+    margin-right: -15px !important;
+    display: flex;
+}
+
+.funcionalidades{
+    flex-direction: column;
+    background-color: #343a40;
+    margin-left: -15px !important;
+    margin-right: -15px !important;
+    display: flex;
+}
+
+
+.img-soft{
+    float: right;
+    padding-bottom: 15px;
+}
+
+.img-inter{
+    float: left;
+    padding-bottom: 35px;
+    padding-top: 40px;
+}
+
+.img-func{
+    float: right;
+    padding-top: 40px;
+    padding-bottom: 35px;
+    padding-right: 50px;
+}
