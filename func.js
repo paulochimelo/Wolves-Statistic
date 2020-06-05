@@ -340,6 +340,13 @@ let fapcont = 0
         tablequantitativa.innerHTML+= `<td> ${chave /*Inserção de variavel na tabela*/}  <td> ${quantDados[chave]/*Insere a quantidade de repetições da variavel*/} <td>${Math.round((quantDados[chave]/acum)*100) /*Insere e calcula a porcentagem de vezes que o elemento foi inserido*/} % <td> ${fac} <td> ${fap} % <br> `      
     }
      //fazer media moda mediana
+     let somatoria = 0
+     let acumulador = 0
+     for (let b = 0; b<vetdiscreta.length; b++){
+        somatoria += Number(vetdiscreta[b])
+        acumulador++
+     }
+     let media = Number(somatoria/acumulador)
      let moda = null
      let ocorrenciasMaior = -1;
  
@@ -364,7 +371,6 @@ let fapcont = 0
      if (acum & 1){
         console.log("Impar")
         console.log(m)
-        console.log("Media: ")
         console.log(`Mediana:${vetdiscreta[m-1]}`)
      } else {
          console.log("Par")
@@ -373,9 +379,9 @@ let fapcont = 0
          let m2 = Number(vetdiscreta[m])
          let mediana = Number(m1+m2) /2
          console.log(`Mediana:${mediana}`)
-         console.log("Media: ")
      }
      console.log(`Moda: ${moda}`)
+     console.log(`Média : ${media}`)
 
     
 
@@ -388,7 +394,7 @@ let fapcont = 0
      for( var i in vetordados){
      total += vetordados[i];
      }
-     console.log(`soma: ${total}`)
+     //console.log(`soma: ${total}`)
      
 }
 
@@ -420,6 +426,14 @@ function quantitativadiscretapop(){
         tablequantitativa.innerHTML+= `<td> ${chave /*Inserção de variavel na tabela*/}  <td> ${quantDados[chave]/*Insere a quantidade de repetições da variavel*/} <td>${Math.round((quantDados[chave]/acum)*100) /*Insere e calcula a porcentagem de vezes que o elemento foi inserido*/} % <td> ${fac} <td> ${fap} % <br> `      
     }
          //fazer media moda mediana
+
+         let somatoria = 0
+         let acumulador = 0
+         for (let b = 0; b<vetdiscreta.length; b++){
+            somatoria += Number(vetdiscreta[b])
+            acumulador++
+         }
+         let media = Number(somatoria/acumulador)
          let moda = 0
          let ocorrenciasMaior = -1;
      
@@ -458,5 +472,6 @@ function quantitativadiscretapop(){
             console.log("Media: ")
          }
          console.log(`Moda: ${moda}`)
+         console.log(`Média : ${media}`)
 
 }
