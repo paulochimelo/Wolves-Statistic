@@ -5,6 +5,7 @@ function qualitativa(){
     let tipoquali = document.getElementById('qualitativa').value
     tablequalitativa.innerHTML = ""
     variavelquali.innerHTML=''
+    tcqualitativa.innerHTML = ''
 
     if (tipodado == 'AMOSTRA'){
         if (tipoquali == 'DISCRETA'){
@@ -26,6 +27,7 @@ function quantitativa(){
     let tipoquanti = document.getElementById('quantitativa').value
     tablequantitativa.innerHTML = ""
     variavelquant.innerHTML=''
+    tendenciacentral.innerHTML=''
     
 
     if (tipodados == 'AMOSTRA'){
@@ -49,10 +51,10 @@ function ordemCrescente(a,b){
 function qualitativaordinal(){
     let nomeVar = document.getElementById('variavelqualitativa').value; 
     tablequalitativa.innerHTML += `<tr> <td>${nomeVar}  </td><td>Frequência Simples</td> <td>Frequência Relativa</td><td>Frequência Acumulada</td><td>Frequência Acumulada Percentual</td></tr> `
-    const dados = document.getElementById('valor').value; 
-    const vetDiscreta = dados.toString().split(';'); 
+    let dados = document.getElementById('valor').value; 
+    let vetDiscreta = dados.toString().split(';'); 
     vetDiscreta.sort() 
-    const quantDados ={} ; 
+    let quantDados ={} ; 
     let acum =0 ; 
     variavelquali.innerHTML+="Variavel Qualitativa Ordinal"
         for(let i = 0 ; i<vetDiscreta.length;i++){ 
@@ -98,19 +100,19 @@ let fapcont = 0
      console.log(vetDiscreta)
      console.log(acum)
      let m = Math.round(acum/2)
+     let mediana = null
      if (acum & 1){
         console.log("Impar")
         console.log(m)
         console.log("Media: Não Possui")
-        console.log(`Mediana:${vetDiscreta[m-1]}`)
+        mediana = vetDiscreta[m-1]
      } else {
          console.log("Par")
          console.log(m)
-         let mediana = (vetDiscreta[m-1] + vetDiscreta[m]) /2
-         console.log(`Mediana:${vetDiscreta[m-1]} ; ${vetDiscreta[m]}`)
-         console.log("Media: Não Possui")
+         mediana = (vetDiscreta[m-1] +","+ vetDiscreta[m])
      }
     console.log(`Moda : ${moda}`)
+    tcqualitativa.innerHTML = ( `<tr> Mediana:${mediana} ||</tr> Moda: ${moda}`)
  }
 
 
@@ -163,20 +165,20 @@ function qualitativanominal(){
      console.log(ele1)
      console.log(vetNominal)
      console.log(acum)
+     let mediana = null
      let m = Math.round(acum/2)
      if (acum & 1){
         console.log("Impar")
         console.log(m)
         console.log("Media: Não Possui")
-        console.log(`Mediana:${vetNominal[m-1]}`)
+        mediana = vetNominal[m-1]
      } else {
          console.log("Par")
          console.log(m)
-         let mediana = (vetNominal[m-1] + vetNominal[m]) /2
-         console.log(`Mediana:${vetNominal[m-1]} ; ${vetNominal[m]}`)
-         console.log("Media: Não Possui")
+         mediana = (vetNominal[m-1] +","+ vetNominal[m]) 
      }
      console.log(`Moda : ${moda}`)
+     tendenciacentralqualitativa.innerHTML = (`Mediana:${mediana} ||</tr> Moda: ${moda}`)
 }
 
 
@@ -264,12 +266,40 @@ let fapcont = 0
     }
 
     //fazer media moda mediana
-    let ultimo = vetDiscreta[vetDiscreta.length - 1]
+    let moda = null
+    let ocorrenciasMaior = -1;
+
+    let contagem = 1;
+    for ( let i = 1 ; i <= vetNominal.length ; i++ ) {
+    if ( i < vetNominal.length && vetNominal[i] == vetNominal[i-contagem] )
+        contagem++;
+    
+    else if ( contagem > ocorrenciasMaior ) {
+        moda = vetNominal[i-1];
+        ocorrenciasMaior = contagem;
+    }
+    }
+    let ultimo = vetNominal[vetNominal.length - 1]
     console.log(ultimo)
-    let ele1 = vetDiscreta[0]
+    console.log(ultimo);
+    let ele1 = vetNominal[0]
     console.log(ele1)
-    console.log(quantDados)
+    console.log(vetNominal)
     console.log(acum)
+    let mediana = null
+    let m = Math.round(acum/2)
+    if (acum & 1){
+       console.log("Impar")
+       console.log(m)
+       console.log("Media: Não Possui")
+       mediana = vetNominal[m-1]
+    } else {
+        console.log("Par")
+        console.log(m)
+        mediana = (vetNominal[m-1] +","+ vetNominal[m]) 
+    }
+    console.log(`Moda : ${moda}`)
+    tendenciacentralqualitativa.innerHTML = (`Mediana:${mediana} ||</tr> Moda: ${moda}`)
 
 
 
@@ -340,49 +370,40 @@ let fapcont = 0
         tablequantitativa.innerHTML+= `<td> ${chave /*Inserção de variavel na tabela*/}  <td> ${quantDados[chave]/*Insere a quantidade de repetições da variavel*/} <td>${Math.round((quantDados[chave]/acum)*100) /*Insere e calcula a porcentagem de vezes que o elemento foi inserido*/} % <td> ${fac} <td> ${fap} % <br> `      
     }
      //fazer media moda mediana
-     let somatoria = 0
-     let acumulador = 0
-     for (let b = 0; b<vetdiscreta.length; b++){
-        somatoria += Number(vetdiscreta[b])
-        acumulador++
-     }
-     let media = Number(somatoria/acumulador)
      let moda = null
      let ocorrenciasMaior = -1;
  
      let contagem = 1;
-     for ( let i = 1 ; i <= vetdiscreta.length ; i++ ) {
-     if ( i < vetdiscreta.length && vetdiscreta[i] == vetdiscreta[i-contagem] )
+     for ( let i = 1 ; i <= vetDiscreta.length ; i++ ) {
+     if ( i < vetDiscreta.length && vetDiscreta[i] == vetDiscreta[i-contagem] )
          contagem++;
      
      else if ( contagem > ocorrenciasMaior ) {
-         moda = vetdiscreta[i-1];
+         moda = vetDiscreta[i-1];
          ocorrenciasMaior = contagem;
      }
      }
-     let ultimo = vetdiscreta[vetdiscreta.length - 1]
+    let ultimo = vetDiscreta[vetDiscreta.length - 1]
      console.log(ultimo)
      console.log(ultimo);
-     let ele1 = vetdiscreta[0]
+     let ele1 = vetDiscreta[0]
      console.log(ele1)
-     console.log(vetdiscreta)
+     console.log(vetDiscreta)
      console.log(acum)
      let m = Math.round(acum/2)
+     let mediana = null
      if (acum & 1){
         console.log("Impar")
         console.log(m)
-        console.log(`Mediana:${vetdiscreta[m-1]}`)
+        console.log("Media: Não Possui")
+        mediana = vetDiscreta[m-1]
      } else {
          console.log("Par")
          console.log(m)
-         let m1 = Number(vetdiscreta[m-1])
-         let m2 = Number(vetdiscreta[m])
-         let mediana = Number(m1+m2) /2
-         console.log(`Mediana:${mediana}`)
+         mediana = (vetDiscreta[m-1] +","+ vetDiscreta[m])
      }
-     console.log(`Moda: ${moda}`)
-     console.log(`Média : ${media}`)
-
+    console.log(`Moda : ${moda}`)
+    tcqualitativa.innerHTML = ( `<tr> Mediana:${mediana} ||</tr> Moda: ${moda}`)
     
 
 
@@ -457,21 +478,20 @@ function quantitativadiscretapop(){
          console.log(acum)
          console.log("teste")
          let m = Math.round(acum/2)
+         let mediana = null
          if (acum & 1){
             console.log("Impar")
             console.log(m)
             console.log("Media: ")
-            console.log(`Mediana:${vetdiscreta[m-1]}`)
+            mediana = vetdiscreta[m-1]
          } else {
             console.log("Par")
             console.log(m)
             let m1 = Number(vetdiscreta[m-1])
             let m2 = Number(vetdiscreta[m])
-            let mediana = Number(m1+m2) /2
-            console.log(`Mediana:${mediana}`)
-            console.log("Media: ")
+            mediana = Number(m1+m2) /2
          }
          console.log(`Moda: ${moda}`)
          console.log(`Média : ${media}`)
-
+         tendenciacentral.innerHTML = ( `<tr>Média : ${media} <tr>|| Mediana:${mediana} ||</tr> Moda: ${moda}`)
 }
