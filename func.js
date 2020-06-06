@@ -113,6 +113,46 @@ let fapcont = 0
      }
     console.log(`Moda : ${moda}`)
     tcqualitativa.innerHTML = ( `<tr> Mediana:${mediana} ||</tr> Moda: ${moda}`)
+    // GRAFICO
+Highcharts.chart('graficoqualitativa', {
+    chart: {
+      plotBackgroundColor: null,
+      plotBorderWidth: null,
+      plotShadow: false,
+      type: 'pie'
+    },
+    title: {
+      text: 'Gráfico teste'
+    },
+    tooltip: {
+      pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    accessibility: {
+      point: {
+        valueSuffix: '%'
+      }
+    },
+    plotOptions: {
+      pie: {
+        allowPointSelect: true,
+        cursor: 'pointer',
+        dataLabels: {
+          enabled: false
+        },
+        showInLegend: true
+      }
+    },
+    series: [{
+      name: 'Variaveis',
+      colorByPoint: true,
+        data: [{
+            name: 'teste',
+            y: 10},{
+                name: 'qualitativa ordinal',
+                y: 90
+        }]
+    }]
+  });
  }
 
 
@@ -178,8 +218,50 @@ function qualitativanominal(){
          mediana = (vetNominal[m-1] +","+ vetNominal[m]) 
      }
      console.log(`Moda : ${moda}`)
-     tendenciacentralqualitativa.innerHTML = (`Mediana:${mediana} ||</tr> Moda: ${moda}`)
-}
+    //tendenciacentralqualitativa.innerHTML = (`Mediana:${mediana} ||</tr> Moda: ${moda}`)
+
+// GRAFICO
+Highcharts.chart('graficoqualitativa', {
+    chart: {
+      plotBackgroundColor: null,
+      plotBorderWidth: null,
+      plotShadow: false,
+      type: 'pie'
+    },
+    title: {
+      text: 'Gráfico teste'
+    },
+    tooltip: {
+      pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    accessibility: {
+      point: {
+        valueSuffix: '%'
+      }
+    },
+    plotOptions: {
+      pie: {
+        allowPointSelect: true,
+        cursor: 'pointer',
+        dataLabels: {
+          enabled: false
+        },
+        showInLegend: true
+      }
+    },
+    series: [{
+      name: 'Variaveis',
+      colorByPoint: true,
+        data: [{
+            name: 'teste',
+            y: 10},{
+                name: 'qualitativa nominal',
+                y: 90
+        }]
+    }]
+  });
+
+    }
 
 
 function quantitativacontinua(){
@@ -212,6 +294,46 @@ function quantitativacontinua(){
         tablequantitativa.innerHTML+=`<td>${valorInicial} |----  ${valorFinal}<td>  <td>  <td>  <td>  </td></td>` 
         var valorInicial = valorFinal
         }
+          // GRAFICO
+   Highcharts.chart('graficoquantitativa', {
+    chart: {
+      plotBackgroundColor: null,
+      plotBorderWidth: null,
+      plotShadow: false,
+      type: 'pie'
+    },
+    title: {
+      text: 'Gráfico teste'
+    },
+    tooltip: {
+      pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    accessibility: {
+      point: {
+        valueSuffix: '%'
+      }
+    },
+    plotOptions: {
+      pie: {
+        allowPointSelect: true,
+        cursor: 'pointer',
+        dataLabels: {
+          enabled: false
+        },
+        showInLegend: true
+      }
+    },
+    series: [{
+      name: 'Variaveis',
+      colorByPoint: true,
+        data: [{
+            name: 'teste',
+            y: 10},{
+                name: 'quantitativa continua',
+                y: 90
+        }]
+    }]
+  });
     }
 
 
@@ -233,6 +355,7 @@ k = (Math.sqrt(k))
 let k2 = k.tofixed(0)
 
 alert(k2,k)
+ 
 }
 
 
@@ -369,6 +492,9 @@ let fapcont = 0
         fap += fapcont
         tablequantitativa.innerHTML+= `<td> ${chave /*Inserção de variavel na tabela*/}  <td> ${quantDados[chave]/*Insere a quantidade de repetições da variavel*/} <td>${Math.round((quantDados[chave]/acum)*100) /*Insere e calcula a porcentagem de vezes que o elemento foi inserido*/} % <td> ${fac} <td> ${fap} % <br> `      
     }
+
+/*
+
      //fazer media moda mediana
      let moda = null
      let ocorrenciasMaior = -1;
@@ -403,7 +529,9 @@ let fapcont = 0
          mediana = (vetDiscreta[m-1] +","+ vetDiscreta[m])
      }
     console.log(`Moda : ${moda}`)
-    tcqualitativa.innerHTML = ( `<tr> Mediana:${mediana} ||</tr> Moda: ${moda}`)
+    tcqualitativa.innerHTML = ( `<tr> Mediana:${mediana} ||</tr> Moda: ${moda}`)  
+
+    */
     
 
 
@@ -416,8 +544,50 @@ let fapcont = 0
      total += vetordados[i];
      }
      //console.log(`soma: ${total}`)
-     
+
+       // GRAFICO
+   Highcharts.chart('graficoquantitativa', {
+    chart: {
+      plotBackgroundColor: null,
+      plotBorderWidth: null,
+      plotShadow: false,
+      type: 'pie'
+    },
+    title: {
+      text: 'Gráfico teste'
+    },
+    tooltip: {
+      pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    accessibility: {
+      point: {
+        valueSuffix: '%'
+      }
+    },
+    plotOptions: {
+      pie: {
+        allowPointSelect: true,
+        cursor: 'pointer',
+        dataLabels: {
+          enabled: false
+        },
+        showInLegend: true
+      }
+    },
+    series: [{
+      name: 'Variaveis',
+      colorByPoint: true,
+        data: [{
+            name: 'teste',
+            y: 10},{
+                name: 'quantitativa discreta',
+                y: 90
+        }]
+    }]
+  });
 }
+     
+
 
 function quantitativadiscretapop(){
     let nomeVar = document.getElementById('variavelquantitativa').value
