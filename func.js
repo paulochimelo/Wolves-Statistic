@@ -79,11 +79,11 @@ let fapcont = 0
           
     }
      //fazer media moda mediana
-     let moda = null
+     let moda = 0
      let ocorrenciasMaior = -1;
  
      let contagem = 1;
-     for ( let i = 1 ; i <= vetDiscreta.length ; i++ ) {
+     for ( let i = 0 ; i <= vetDiscreta.length ; i++ ) {
      if ( i < vetDiscreta.length && vetDiscreta[i] == vetDiscreta[i-contagem] )
          contagem++;
      
@@ -92,6 +92,10 @@ let fapcont = 0
          ocorrenciasMaior = contagem;
      }
      }
+     if (moda == undefined){
+        moda = String("Amodal")
+     }
+
     let ultimo = vetDiscreta[vetDiscreta.length - 1]
      console.log(ultimo)
      console.log(ultimo);
@@ -149,7 +153,7 @@ function qualitativanominal(){
      let ocorrenciasMaior = -1;
  
      let contagem = 1;
-     for ( let i = 1 ; i <= vetNominal.length ; i++ ) {
+     for ( let i = 0 ; i <= vetNominal.length ; i++ ) {
      if ( i < vetNominal.length && vetNominal[i] == vetNominal[i-contagem] )
          contagem++;
      
@@ -157,6 +161,9 @@ function qualitativanominal(){
          moda = vetNominal[i-1];
          ocorrenciasMaior = contagem;
      }
+     }
+     if (moda == undefined){
+        moda = String("Amodal")
      }
      let ultimo = vetNominal[vetNominal.length - 1]
      console.log(ultimo)
@@ -270,7 +277,7 @@ let fapcont = 0
     let ocorrenciasMaior = -1;
 
     let contagem = 1;
-    for ( let i = 1 ; i <= vetNominal.length ; i++ ) {
+    for ( let i = 0 ; i <= vetNominal.length ; i++ ) {
     if ( i < vetNominal.length && vetNominal[i] == vetNominal[i-contagem] )
         contagem++;
     
@@ -279,6 +286,9 @@ let fapcont = 0
         ocorrenciasMaior = contagem;
     }
     }
+    if (moda == undefined){
+        moda = String("Amodal")
+     }
     let ultimo = vetNominal[vetNominal.length - 1]
     console.log(ultimo)
     console.log(ultimo);
@@ -374,7 +384,7 @@ let fapcont = 0
      let ocorrenciasMaior = -1;
  
      let contagem = 1;
-     for ( let i = 1 ; i <= vetDiscreta.length ; i++ ) {
+     for ( let i = 0 ; i <= vetDiscreta.length ; i++ ) {
      if ( i < vetDiscreta.length && vetDiscreta[i] == vetDiscreta[i-contagem] )
          contagem++;
      
@@ -382,6 +392,9 @@ let fapcont = 0
          moda = vetDiscreta[i-1];
          ocorrenciasMaior = contagem;
      }
+     }
+     if (moda == undefined){
+        moda = String("Amodal")
      }
     let ultimo = vetDiscreta[vetDiscreta.length - 1]
      console.log(ultimo)
@@ -459,7 +472,7 @@ function quantitativadiscretapop(){
          let ocorrenciasMaior = -1;
      
          let contagem = 1;
-         for ( let i = 1 ; i <= vetdiscreta.length ; i++ ) {
+         for ( let i = 0 ; i <= vetdiscreta.length ; i++ ) {
          if ( i < vetdiscreta.length && vetdiscreta[i] == vetdiscreta[i-contagem] )
              contagem++;
          
@@ -468,6 +481,9 @@ function quantitativadiscretapop(){
              ocorrenciasMaior = contagem;
          }
          
+         }
+         if (moda == undefined){
+            moda = String("Amodal")
          }
          let ultimo = vetdiscreta[vetdiscreta.length - 1]
          console.log(ultimo)
