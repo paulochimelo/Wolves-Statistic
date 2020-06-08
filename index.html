@@ -32,6 +32,12 @@
             <option value="DISCRETA"  id = "discreta">ORDINAL</option>
             <option value="NOMINAL"  id = "nominal">NOMINAL</option>
         </select>
+        <select id = medidaseparatiz>
+            <option value="QUARTIL"  id = "QUARTIL">QUARTIL</option>
+            <option value="QUINTIL"  id = "QUINTIL">QUINTIL</option>
+            <option value="DECIL"  id = "DECIL">DECIL</option>
+            <option value="PORCENTIL"  id = "PORCENTIL">PORCENTIL</option>
+        </select>
         <button type="button" onclick="qualitativa()">Calcular</button>
         <div >
             <table class="table" width="200px"  text-align: center table-layout: fixed margin-bottom : .5em id="variavelquali"><tr><strong><h1></h1></strong></tr></table>
@@ -64,6 +70,12 @@
             <option value="DISCRETA"  id = "discretaquant">DISCRETA</option>
             <option value="NOMINAL" id = "nominalquant">CONTINUA</option>
         </select>
+        <select id = medidaseparatizm>
+            <option value="QUARTIL"  id = "QUARTILm">QUARTIL</option>
+            <option value="QUINTIL"  id = "QUINTILm">QUINTIL</option>
+            <option value="DECIL"  id = "DECILm">DECIL</option>
+            <option value="PORCENTIL"  id = "PORCENTILm">PORCENTIL</option>
+        </select>
         <button class="button" onclick="quantitativa()">Calcular</button>
         <div >
             <table id="variavelquant"><tr><strong><h1></h1></strong></tr></table>
@@ -81,8 +93,10 @@
         </div>
     </div> 
     <div class = 'Versao'>
-        <center>Versão 1.6.3</center>
+        <center>Versão 1.8.3</center>
     </div>
     <script src ="func.js"></script>
+    <script src ="qualitativa.js"></script>
+    <script src ="quantitativa.js"></script>
 </body>
 </html>
