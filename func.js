@@ -281,7 +281,7 @@ function qualitativanominal(){
          mediana = (vetNominal[m-1] +","+ vetNominal[m]) 
      }
      console.log(`Moda : ${moda}`)
-    //tendenciacentralqualitativa.innerHTML = (`Mediana:${mediana} ||</tr> Moda: ${moda}`)
+     tcqualitativa.innerHTML = (`Mediana:${mediana} ||</tr> Moda: ${moda}`)
 
 // GRAFICO
 Highcharts.chart('graficoqualitativa', {
@@ -664,24 +664,24 @@ let fapcont = 0
      let ocorrenciasMaior = -1;
  
      let contagem = 1;
-     for ( let i = 0 ; i <= vetDiscreta.length ; i++ ) {
-     if ( i < vetDiscreta.length && vetDiscreta[i] == vetDiscreta[i-contagem] )
+     for ( let i = 0 ; i <= vetdiscreta.length ; i++ ) {
+     if ( i < vetdiscreta.length && vetdiscreta[i] == vetdiscreta[i-contagem] )
          contagem++;
      
      else if ( contagem > ocorrenciasMaior ) {
-         moda = vetDiscreta[i-1];
+         moda = vetdiscreta[i-1];
          ocorrenciasMaior = contagem;
      }
      }
      if (moda == undefined){
         moda = String("Amodal")
      }
-    let ultimo = vetDiscreta[vetDiscreta.length - 1]
+    let ultimo = vetdiscreta[vetdiscreta.length - 1]
      console.log(ultimo)
      console.log(ultimo);
-     let ele1 = vetDiscreta[0]
+     let ele1 = vetdiscreta[0]
      console.log(ele1)
-     console.log(vetDiscreta)
+     console.log(vetdiscreta)
      console.log(acum)
      let m = Math.round(acum/2)
      let mediana = null
@@ -689,28 +689,15 @@ let fapcont = 0
         console.log("Impar")
         console.log(m)
         console.log("Media: Não Possui")
-        mediana = vetDiscreta[m-1]
+        mediana = vetdiscreta[m-1]
      } else {
          console.log("Par")
          console.log(m)
-         mediana = (vetDiscreta[m-1] +","+ vetDiscreta[m])
+         mediana = (vetdiscreta[m-1] +","+ vetdiscreta[m])
      }
     console.log(`Moda : ${moda}`)
-    tcqualitativa.innerHTML = ( `<tr> Mediana:${mediana} ||</tr> Moda: ${moda}`)  
+    tendenciacentral.innerHTML = ( `<tr> Mediana:${mediana} ||</tr> Moda: ${moda}`)  
 
-    
-    
-
-
-     // Soma dos valores totais, alterando o vetdiscreta para um novo vetor com dados em number
-     // e somando todo o vetor
-     let vetordados =  vetdiscreta
-     parseInt(vetordados)
-     var total = 0;
-     for( var i in vetordados){
-     total += vetordados[i];
-     }
-     //console.log(`soma: ${total}`)
 
        // GRAFICO
    Highcharts.chart('graficoquantitativa', {
