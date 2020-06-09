@@ -32,12 +32,14 @@
             <option value="DISCRETA"  id = "discreta">ORDINAL</option>
             <option value="NOMINAL"  id = "nominal">NOMINAL</option>
         </select>
-        <select id = medidaseparatiz>
-            <option value="QUARTIL"  id = "QUARTIL">QUARTIL</option>
-            <option value="QUINTIL"  id = "QUINTIL">QUINTIL</option>
-            <option value="DECIL"  id = "DECIL">DECIL</option>
-            <option value="PORCENTIL"  id = "PORCENTIL">PORCENTIL</option>
+        <select id = medidaseparatizes onchange="medidaseparatiz()">
+            <option value="1" id = "separatriz">MEDIDAS SEPARATRIZES</option>
+            <option value="4"  id = "Q">QUARTIL</option>
+            <option value="5"  id = "K">QUINTIL</option>
+            <option value="10"  id = "D">DECIL</option>
+            <option value="100"  id = "P">PORCENTIL</option>
         </select>
+        <input id = porcentagem type = "number" min = "1" max = "1"></input>
         <button type="button" onclick="qualitativa()">Calcular</button>
         <div >
             <table class="table" width="200px"  text-align: center table-layout: fixed margin-bottom : .5em id="variavelquali"><tr><strong><h1></h1></strong></tr></table>
@@ -50,7 +52,8 @@
               </figure>
         </div>
         <div>
-            <table class="table" id="tcqualitativa"></table>   
+            <table class="table" id="tcqualitativa"></table>
+            <table class="table" id="mdseparatriz"></table>   
         </div>
         
         
