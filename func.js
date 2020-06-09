@@ -1,9 +1,12 @@
 function medidaseparatiz(){
-  console.log("true")
   let opmax = document.getElementById('medidaseparatizes').value
-  console.log(opmax)
   porcentagem.max = opmax
   porcentagem.value = ''
+  console.log("true")
+  let opmaxm = document.getElementById('medidaseparatizesm').value
+  console.log(opmaxm)
+  porcentagemm.max = opmaxm
+  porcentagemm.value = ''
 }
 
 function qualitativa(){
@@ -632,7 +635,29 @@ let fapcont = 0
         tablequantitativa.innerHTML+= `<td> ${chave /*Inserção de variavel na tabela*/}  <td> ${quantDados[chave]/*Insere a quantidade de repetições da variavel*/} <td>${Math.round((quantDados[chave]/acum)*100) /*Insere e calcula a porcentagem de vezes que o elemento foi inserido*/} % <td> ${fac} <td> ${fap} % <br> `      
     }
 
-/*
+  //Medida separatriz
+  mdseparatrizm.innerHTML = ''
+  let porce = document.getElementById('porcentagemm').value
+  console.log(porce)
+  let pmax =  document.getElementById('porcentagemm').max
+  console.log(pmax)
+  let porc = (100/pmax)*porce
+  console.log(porc)
+  let itemvet = Math.round((acum/100)*porc)
+  console.log(itemvet)
+  let separatrizes = vetdiscreta[itemvet-1]
+  console.log(separatrizes)
+  let returnid = ''
+  if (pmax == 4){
+    returnid = "Q"
+  }else if (pmax == 5){
+    returnid = "K"
+  }else if (pmax == 10){
+    returnid = "D"
+  }else if (pmax == 100){
+    returnid = "P"
+  }
+  mdseparatrizm.innerHTML = `${returnid}${porce} = ${separatrizes}`
 
      //fazer media moda mediana
      let moda = null
@@ -673,7 +698,7 @@ let fapcont = 0
     console.log(`Moda : ${moda}`)
     tcqualitativa.innerHTML = ( `<tr> Mediana:${mediana} ||</tr> Moda: ${moda}`)  
 
-    */
+    
     
 
 

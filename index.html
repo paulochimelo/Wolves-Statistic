@@ -72,19 +72,22 @@
         <select id = quantitativa>
             <option value="DISCRETA"  id = "discretaquant">DISCRETA</option>
             <option value="NOMINAL" id = "nominalquant">CONTINUA</option>
+        </select>        
+        <select id = medidaseparatizesm onchange="medidaseparatiz()">
+            <option value="1" id = "separatrizm">MEDIDAS SEPARATRIZES</option>
+            <option value="4"  id = "Qm">QUARTIL</option>
+            <option value="5"  id = "Km">QUINTIL</option>
+            <option value="10"  id = "Dm">DECIL</option>
+            <option value="100"  id = "Pm">PORCENTIL</option>
         </select>
-        <select id = medidaseparatizm>
-            <option value="QUARTIL"  id = "QUARTILm">QUARTIL</option>
-            <option value="QUINTIL"  id = "QUINTILm">QUINTIL</option>
-            <option value="DECIL"  id = "DECILm">DECIL</option>
-            <option value="PORCENTIL"  id = "PORCENTILm">PORCENTIL</option>
-        </select>
+        <input id = porcentagemm type = "number" min = "1" max = "1"></input>
         <button class="button" onclick="quantitativa()">Calcular</button>
         <div >
             <table id="variavelquant"><tr><strong><h1></h1></strong></tr></table>
             <table id="tablequantitativa" border="1">
             </table>
             <table id="tendenciacentral"></table>
+            <table class="table" id="mdseparatrizm"></table>
             <figure class="highcharts-figure">
                 <div id="graficoquantitativa"></div>
                 <p class="highcharts-description">
