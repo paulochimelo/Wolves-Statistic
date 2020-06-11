@@ -363,11 +363,13 @@ function quantitativacontinua(){
         if(vetDiscreta[i] < valorFinal & vetDiscreta[i] >= valorInicial){
           cont += 1
           vetfi += vetDiscreta[i]
+          fr = Math.round((cont/xmax)*100)
         }
         if(vetDiscreta[i] < valorFinal){
           fac += 1 
+          fap = Math.round((fac/xmax)*100)
       }}
-        tablequantitativa.innerHTML+=`<td>${valorInicial} |----  ${valorFinal}<td> ${cont}  <td> ${fr} <td> ${fac} <td> ${fap} </td></td>` 
+        tablequantitativa.innerHTML+=`<td>${valorInicial} |----  ${valorFinal}<td> ${cont}  <td> ${fr} % <td> ${fac} <td> ${fap} % </td></td>` 
         var valorInicial = valorFinal
         }
           // GRAFICO
