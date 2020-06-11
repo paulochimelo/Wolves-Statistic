@@ -329,7 +329,7 @@ Highcharts.chart('graficoqualitativa', {
 
 function quantitativacontinua(){
         let nomeVar = document.getElementById('variavelquantitativa').value;
-        tablequantitativa.innerHTML += `<tr> <td> Variavel   </td><td>Frequência Simples</td><td>Frequência Relativa</td><td>Frequência Acumulada</td><td>Frequência Acumulada Percentual</td></tr> `
+        tablequantitativa.innerHTML += `<tr> <td> ${nomeVar}   </td><td>Frequência Simples</td><td>Frequência Relativa</td><td>Frequência Acumulada</td><td>Frequência Acumulada Percentual</td></tr> `
         variavelquant.innerHTML+=('Variavel Quantitativa Continua')
 		let dados_continua = document.getElementById('valores').value;
 		let vetDiscreta = dados_continua.toString().split(';');
@@ -354,7 +354,20 @@ function quantitativacontinua(){
         var valorFinal = 0 ;
         valorFinal = Number(valorInicial + ic)
         console.log(`${valorInicial}:${valorFinal}:${xmax}`)
-        tablequantitativa.innerHTML+=`<td>${valorInicial} |----  ${valorFinal}<td>  <td>  <td>  <td>  </td></td>` 
+        vetfi = []
+        cont = 0
+        fac = 0
+        fr = 0
+        fap = 0
+        for ( let i = 0 ; i <= vetDiscreta.length ; i++ ) {
+        if(vetDiscreta[i] < valorFinal & vetDiscreta[i] >= valorInicial){
+          cont += 1
+          vetfi += vetDiscreta[i]
+        }
+        if(vetDiscreta[i] < valorFinal){
+          fac += 1 
+      }}
+        tablequantitativa.innerHTML+=`<td>${valorInicial} |----  ${valorFinal}<td> ${cont}  <td> ${fr} <td> ${fac} <td> ${fap} </td></td>` 
         var valorInicial = valorFinal
         }
           // GRAFICO
