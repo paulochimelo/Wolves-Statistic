@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="quantitativa.html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <title>Quantitativa</title>
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand logoH" href="home.html">
+          <img 
+          src="img/wolves.png" 
+          width="70" 
+          height="70" 
+          class="d-inline-block align-top" 
+          >
+            Wolves Statistic 
+        </a>
+        <div bg="dark navbar-expand-lg navbar-default fixed-top" variant="dark"></div>
+            <div class="navbar navbar-expand-lg text-light links">
+              <a class="navbar-brand nav-link active linkP back-link" href="home.html">Home</a>
+              <a class="nav-item nav-link active linkP back-link" href="home.html">Sobre</a>
+              <a class="nav-item nav-link active linkP back-link" href="home.html">Contato</a>
+              <a class="nav-item nav-link active linkP back-link" href="calculos.html">Cálculos</a>
+            </div>
+            
+        </div>
+        <button type="button" class="btn btn-primary btnH">Login</button>
+      </nav>
+    <div class="container-qualitativa">
+        <div class="calculo">
+            <div class="card-quali" style="width: 50rem;">
+                <h3 class="card-header tit-cal">Qualitativa</h3>
+                <div class="card-body">
+                  <h5 class="card-title subtit">Entrada de Dados</h5>
+                  <div class="form">
+                    <form>
+                        <div class="form-group">
+                          <input type="text" class="form-control input" id="" placeholder="Nome da váriavel">
+                          <input type="text" class="form-control input" id="" placeholder="Dados ex: 1;2;3;...">
+                          <div class="form-group">
+                            <input type="file" class="form-control-file input-archive" id="exampleFormControlFile1">
+                          </div>
+                            <div class="input-drop">
+                                <label>Tipo de Pesquisa: </label>
+                                <select class="custom-select">
+                                    <option selected>Selecione</option>
+                                    <option value="1">Amostra</option>
+                                    <option value="2">População</option>
+                                </select>
+                            </div>
+                            <div class="input-drop">
+                                <label>Tipo de Variável: </label>
+                                <select class="custom-select">
+                                    <option selected>Selecione</option>
+                                    <option value="1">Quantitativa Discreta</option>
+                                    <option value="2">Quantitativa Contínua</option>
+                                </select>
+                            </div>
+                            <div class="input-drop">
+                                <label>Medidas Separatrizes: </label>
+                                <select class="input-drop1">
+                                    <option selected>Selecione</option>
+                                    <option value="1">Quartil</option>
+                                    <option value="2">Quintil</option>
+                                    <option value="1">Descil</option>
+                                    <option value="2">Porcentil</option>
+                                </select>
+                            </div>
+                          </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btnC1">Calcular</button>
+                      </form>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
