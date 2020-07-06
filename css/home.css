@@ -50,7 +50,7 @@ body{
     background-color: #343a40 !important;
 }
 
-.container{
+.container-home{
     background-color: #343a40;
     max-width: 100% !important;
 }
@@ -124,7 +124,7 @@ body{
 .soft{
     height: 600px;
     flex-direction: column;
-    margin-top: 45px;
+    margin-top: 25px !important;
 }
 
 .interface{
