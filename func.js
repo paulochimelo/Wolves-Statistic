@@ -29,5 +29,5 @@ function PROBABILIDADE(){
 
 
 function probabilidadenominal(){
-    
+    console.log("S")
 }
