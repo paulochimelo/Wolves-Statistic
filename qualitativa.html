@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/qualitativa.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -18,6 +19,11 @@
     <title>Qualitativa</title>
 </head>
 <body>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
     <nav class="navbar navbar-dark bg-dark">
         <a class="navbar-brand logoH" href="index.html">
           <img 
@@ -46,35 +52,35 @@
                   <div class="form">
                     <form>
                         <div class="form-group">
-                          <input type="text" class="form-control input" id="" placeholder="Nome da váriavel">
-                          <input type="text" class="form-control input" id="" placeholder="Dados ex: 1;2;3;...">
+                          <input type="text" class="form-control input" id="variavelqualitativa" placeholder="Nome da váriavel">
+                          <input type="text" class="form-control input" id="valor" placeholder="Dados ex: 1;2;3;...">
                           <div class="form-group">
                             <input type="file" class="form-control-file input-archive" id="exampleFormControlFile1">
                           </div>
                             <div>
                                 <label class="desc-input">Tipo de Pesquisa: </label>
-                                <select class="input-drop">
+                                <select class="input-drop" id="tipdadosqualitativa">
                                     <option selected>Selecione</option>
-                                    <option value="AMOSTRA">Amostra</option>
-                                    <option value="POPULAÇAO">População</option>
+                                    <option value="AMOSTRA" id="Amostraqual">Amostra</option>
+                                    <option value="POPULAÇAO" id="Amostraqual">População</option>
                                 </select>
                             </div>
                             <div>
                                 <label class="desc-input1">Tipo de Variável: </label>
-                                <select class="input-drop">
+                                <select class="input-drop" id="qualitativa">
                                     <option selected>Selecione</option>
-                                    <option value="NOMINAL">Qualitativa Nominal</option>
-                                    <option value="DISCRETA">Qualitativa Ordinal</option>
+                                    <option value="NOMINAL" id="nominal">Qualitativa Nominal</option>
+                                    <option value="DISCRETA" id="discreta">Qualitativa Ordinal</option>
                                 </select>
                             </div>
                             <div>
                                 <label class="desc-input">Medidas Separatrizes: </label>
-                                <select class="input-drop">
-                                    <option selected>Selecione</option>
-                                    <option value="4" id = "Qm">Quartil</option>
-                                    <option value="5" id = "Km">Quintil</option>
-                                    <option value="10" id = "Dm">Descil</option>
-                                    <option value="100" id = "Pm">Porcentil</option>
+                                <select class="input-drop" id="medidaseparatizes">
+                                    <option selected value="1">Selecione</option>
+                                    <option value="4" id = "Q">Quartil</option>
+                                    <option value="5" id = "K">Quintil</option>
+                                    <option value="10" id = "D">Descil</option>
+                                    <option value="100" id = "P">Porcentil</option>
                                 </select>
                             </div>
                             <input type="text" class="form-control input" id="" placeholder="Ordem das Variaveis...">
