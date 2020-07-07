@@ -26,3 +26,8 @@ alert(k2,k)
 function PROBABILIDADE(){
     console.log('S')
 }
+
+
+function probabilidadenominal(){
+    
+}
