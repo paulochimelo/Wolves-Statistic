@@ -41,6 +41,7 @@ function PROBABILIDADE(){
         k = k * evento
         evento - 1
     }
-    console.log (k)
+    
+    console.log(k)
 }
 
