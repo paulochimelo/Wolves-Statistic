@@ -71,10 +71,10 @@
                                 <label class="desc-input">Medidas Separatrizes: </label>
                                 <select class="input-drop">
                                     <option selected>Selecione</option>
-                                    <option value="1">Quartil</option>
-                                    <option value="2">Quintil</option>
-                                    <option value="1">Descil</option>
-                                    <option value="2">Porcentil</option>
+                                    <option value="4" id = "Qm">Quartil</option>
+                                    <option value="5" id = "Km">Quintil</option>
+                                    <option value="10" id = "Dm">Descil</option>
+                                    <option value="100" id = "Pm">Porcentil</option>
                                 </select>
                             </div>
                             <input type="text" class="form-control input" id="" placeholder="Ordem das Variaveis...">
@@ -83,6 +83,18 @@
                         <button type="submit" class="btn btn-primary btnC1" onclick="qualitativa()">Calcular</button>
                       </form>
                   </div>
+                  <div >
+                    <table id="variavelquant"><tr><strong><h1></h1></strong></tr></table>
+                    <table id="tablequantitativa" border="1">
+                    </table>
+                    <table class="table" id="tendenciacentral"></table>
+                    <table class="table" id="mdseparatrizm"></table>
+                    <figure class="highcharts-figure">
+                        <div id="graficoquantitativa"></div>
+                        <p class="highcharts-description">
+                        </p>
+                      </figure>
+                </div>
                 </div>
             </div>
         </div>
@@ -107,18 +119,6 @@
                           <li></li>
                       </ul>
                   </div>
-                  <div >
-                    <table id="variavelquant"><tr><strong><h1></h1></strong></tr></table>
-                    <table id="tablequantitativa" border="1">
-                    </table>
-                    <table class="table" id="tendenciacentral"></table>
-                    <table class="table" id="mdseparatrizm"></table>
-                    <figure class="highcharts-figure">
-                        <div id="graficoquantitativa"></div>
-                        <p class="highcharts-description">
-                        </p>
-                      </figure>
-                </div>
                   <div class="col-md-6 item text">
                       <h3>Wolves Statistic</h3>
                       <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.</p>
