@@ -46,31 +46,31 @@
                   <div class="form">
                     <form>
                         <div class="form-group">
-                          <input type="text" class="form-control input" id="" placeholder="Nome da váriavel">
-                          <input type="text" class="form-control input" id="" placeholder="Dados ex: 1;2;3;...">
+                          <input type="text" class="form-control input" id="variavelqualitativa" placeholder="Nome da váriavel">
+                          <input type="text" class="form-control input" id="valor" placeholder="Dados ex: 1;2;3;...">
                           <div class="form-group">
                             <input type="file" class="form-control-file input-archive" id="exampleFormControlFile1">
                           </div>
                             <div>
                                 <label class="desc-input">Tipo de Pesquisa: </label>
-                                <select class="input-drop">
+                                <select class="input-drop" id="tipdadosqualitativa">
                                     <option selected>Selecione</option>
-                                    <option value="AMOSTRA">Amostra</option>
-                                    <option value="POPULAÇAO">População</option>
+                                    <option value="AMOSTRA" id="Amostraqual">Amostra</option>
+                                    <option value="POPULAÇAO" id="Amostraqual">População</option>
                                 </select>
                             </div>
                             <div>
                                 <label class="desc-input1">Tipo de Variável: </label>
-                                <select class="input-drop">
+                                <select class="input-drop" id="qualitativa">
                                     <option selected>Selecione</option>
-                                    <option value="NOMINAL">Qualitativa Nominal</option>
-                                    <option value="DISCRETA">Qualitativa Ordinal</option>
+                                    <option value="NOMINAL" id="nominal">Qualitativa Nominal</option>
+                                    <option value="DISCRETA" id="discreta">Qualitativa Ordinal</option>
                                 </select>
                             </div>
                             <div>
                                 <label class="desc-input">Medidas Separatrizes: </label>
-                                <select class="input-drop">
-                                    <option selected>Selecione</option>
+                                <select class="input-drop" id="medidaseparatizes">
+                                    <option selected value="1">Selecione</option>
                                     <option value="4" id = "Qm">Quartil</option>
                                     <option value="5" id = "Km">Quintil</option>
                                     <option value="10" id = "Dm">Descil</option>
