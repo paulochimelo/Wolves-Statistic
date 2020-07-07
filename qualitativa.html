@@ -19,7 +19,7 @@
 </head>
 <body>
     <nav class="navbar navbar-dark bg-dark">
-        <a class="navbar-brand logoH" href="home.html">
+        <a class="navbar-brand logoH" href="index.html">
           <img 
           src="img/wolves.png" 
           width="70" 
@@ -28,16 +28,15 @@
           >
             Wolves Statistic 
         </a>
-        <div bg="dark navbar-expand-lg navbar-default fixed-top" variant="dark"></div>
+        <div bg="dark navbar-expand-lg navbar-default" variant="dark"></div>
             <div class="navbar navbar-expand-lg text-light links">
-              <a class="navbar-brand nav-link active linkP back-link" href="home.html">Home</a>
+              <a class="navbar-item nav-link active linkP back-link" href="index.html">Home</a>
               <a class="nav-item nav-link active linkP back-link" href="sobre.html">Sobre</a>
               <a class="nav-item nav-link active linkP back-link" href="calculos.html">Cálculos</a>
+              <button type="button" class="btn btn-primary btn-info btnH">Login</button>
             </div>
-            
         </div>
-        <button type="button" class="btn btn-primary btnH">Login</button>
-      </nav>
+    </nav>
     <div class="container-qualitativa">
         <div class="calculo">
             <div class="card-quali" style="width: 50rem;">
@@ -52,25 +51,25 @@
                           <div class="form-group">
                             <input type="file" class="form-control-file input-archive" id="exampleFormControlFile1">
                           </div>
-                            <div class="input-drop">
-                                <label>Tipo de Pesquisa: </label>
-                                <select class="custom-select">
+                            <div>
+                                <label class="desc-input">Tipo de Pesquisa: </label>
+                                <select class="input-drop">
                                     <option selected>Selecione</option>
                                     <option value="1">Amostra</option>
                                     <option value="2">População</option>
                                 </select>
                             </div>
-                            <div class="input-drop">
-                                <label>Tipo de Variável: </label>
-                                <select class="custom-select">
+                            <div>
+                                <label class="desc-input1">Tipo de Variável: </label>
+                                <select class="input-drop">
                                     <option selected>Selecione</option>
                                     <option value="1">Qualitativa Nominal</option>
                                     <option value="2">Qualitativa Ordinal</option>
                                 </select>
                             </div>
-                            <div class="input-drop">
-                                <label>Medidas Separatrizes: </label>
-                                <select class="desc-input">
+                            <div>
+                                <label class="desc-input">Medidas Separatrizes: </label>
+                                <select class="input-drop">
                                     <option selected>Selecione</option>
                                     <option value="1">Quartil</option>
                                     <option value="2">Quintil</option>
@@ -117,8 +116,5 @@
               <p class="copyright">Wolves Statistic © 2020</p>
           </div>
       </footer>
-      <script src ="func.js"></script>
-      <script src ="qualitativa.js"></script>
-      <script src ="quantitativa.js"></script>
 </body>
 </html>

@@ -19,7 +19,7 @@
 </head>
 <body>
     <nav class="navbar navbar-dark bg-dark">
-        <a class="navbar-brand logoH" href="home.html">
+        <a class="navbar-brand logoH" href="index.html">
           <img 
           src="img/wolves.png" 
           width="70" 
@@ -30,7 +30,7 @@
         </a>
         <div bg="dark navbar-expand-lg navbar-default fixed-top" variant="dark"></div>
             <div class="navbar navbar-expand-lg text-light links">
-              <a class="navbar-brand nav-link active linkP back-link" href="home.html">Home</a>
+              <a class="navbar-brand nav-link active linkP back-link" href="index.html">Home</a>
               <a class="nav-item nav-link active linkP back-link" href="sobre.html">Sobre</a>
               <a class="nav-item nav-link active linkP back-link" href="calculos.html">Cálculos</a>
             </div>
@@ -41,35 +41,37 @@
     <div class="container-uniforme">
         <div class="calculo">
             <div class="card-uniforme" style="width: 30rem;">
-                <h3 class="card-header tit-cal">Probabilidade</h3>
-                <div class="row row-cols-3 Colum">
-                    <div class="col">
-                        <button class="btn btn-primary  btncProb" variant="outline-info">Uniforme</button>
-                    </div>
-                    <div class="col">
-                        <button class="btn btn-primary btncProb" variant="outline-info">Binomial</button>
-                    </div>
-                    <div class="col">
-                        <button class="btn btn-primary  btncProb" variant="outline-info">Normal</button>
+                <div class="card-header">
+                    <h3 class="tit-cal">Probabilidade</h3>
+                    <div class="row row-cols-3 Colum">
+                        <div class="col">
+                            <a href="probuniforme.html"><button class="btn btn-primary  btncProb" variant="outline-info">Uniforme</button></a>
+                        </div>
+                        <div class="col">
+                            <a href="probbinomial.html"><button class="btn btn-primary btncProb" variant="outline-info">Binomial</button></a>
+                        </div>
+                        <div class="col">
+                            <a href="#"><button class="btn btn-primary  btncProb" variant="outline-info">Normal</button></a>
+                        </div>
                     </div>
                 </div>
                 <div class="card-body">
-                  <h5 class="card-title subtit">Entrada de Dados Uniforme</h5>
+                  <h5 class="card-title subtit-binomial">Entrada de Dados Uniforme</h5>
                   <div class="form">
                     <form>
                         <div class="form-group">
-                            <div class="input-drop">
-                                <label>Tipo de Pesquisa: </label>
-                                <select class="custom-select">
+                            <div>
+                                <label class="desc-input-uniforme">Intervalo: </label>
+                                <select class="input-drop">
                                     <option selected>Selecione</option>
                                     <option value="1">Maior</option>
                                     <option value="2">Entre</option>
                                     <option value="2">Menor</option>
                                 </select>
                             </div>
-                            <input type="text" class="input-uniforme" id="" placeholder="Média">
-                            <input type="text" class="input-uniforme" id="" placeholder="Desvio Padrão">
-                            <input type="text" class="input-uniforme" id="" placeholder="Quantidade">
+                            <input type="text" class="form-control input-uniforme" id="" placeholder="Média">
+                            <input type="text" class="form-control input-uniforme" id="" placeholder="Desvio Padrão">
+                            <input type="text" class="form-control input-uniforme" id="" placeholder="Quantidade">
                           </div>
                         </div>
                         <button type="submit" class="btn btn-primary btnUni">Calcular</button>

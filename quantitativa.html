@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="quantitativa.html">
+    <link rel="stylesheet" href="css/quantitativa.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -19,7 +19,7 @@
 </head>
 <body>
     <nav class="navbar navbar-dark bg-dark">
-        <a class="navbar-brand logoH" href="home.html">
+        <a class="navbar-brand logoH" href="index.html">
           <img 
           src="img/wolves.png" 
           width="70" 
@@ -28,20 +28,19 @@
           >
             Wolves Statistic 
         </a>
-        <div bg="dark navbar-expand-lg navbar-default fixed-top" variant="dark"></div>
+        <div bg="dark navbar-expand-lg navbar-default" variant="dark"></div>
             <div class="navbar navbar-expand-lg text-light links">
-              <a class="navbar-brand nav-link active linkP back-link" href="home.html">Home</a>
+              <a class="navbar-item nav-link active linkP back-link" href="index.html">Home</a>
               <a class="nav-item nav-link active linkP back-link" href="sobre.html">Sobre</a>
               <a class="nav-item nav-link active linkP back-link" href="calculos.html">Cálculos</a>
+              <button type="button" class="btn btn-primary btn-info btnH">Login</button>
             </div>
-            
         </div>
-        <button type="button" class="btn btn-primary btnH">Login</button>
-      </nav>
-    <div class="container-qualitativa">
+    </nav>
+    <div class="container-quantitativa">
         <div class="calculo">
-            <div class="card-quali" style="width: 50rem;">
-                <h3 class="card-header tit-cal">Qualitativa</h3>
+            <div class="card-quant" style="width: 50rem;">
+                <h3 class="card-header tit-cal">Quantitativa</h3>
                 <div class="card-body">
                   <h5 class="card-title subtit">Entrada de Dados</h5>
                   <div class="form">
@@ -52,24 +51,24 @@
                           <div class="form-group">
                             <input type="file" class="form-control-file input-archive" id="exampleFormControlFile1">
                           </div>
-                            <div class="input-drop">
-                                <label>Tipo de Pesquisa: </label>
-                                <select class="custom-select">
+                            <div class="selecao">
+                                <label class="desc-input">Tipo de Pesquisa: </label>
+                                <select class="input-drop">
                                     <option selected>Selecione</option>
-                                    <option value="AMOSTRA">Amostra</option>
-                                    <option value="POPULAÇÃO">População</option>
+                                    <option value="1">Amostra</option>
+                                    <option value="2">População</option>
                                 </select>
                             </div>
-                            <div class="input-drop">
-                                <label>Tipo de Variável: </label>
-                                <select class="custom-select">
+                            <div class="selecao">
+                                <label class="desc-input1">Tipo de Variável: </label>
+                                <select class="input-drop">
                                     <option selected>Selecione</option>
                                     <option value="1">Quantitativa Discreta</option>
                                     <option value="2">Quantitativa Contínua</option>
                                 </select>
                             </div>
-                            <div class="input-drop">
-                                <label>Medidas Separatrizes: </label>
+                            <div class="selecao">
+                                <label class="desc-input">Medidas Separatrizes: </label>
                                 <select class="input-drop1">
                                     <option selected>Selecione</option>
                                     <option value="1">Quartil</option>
@@ -80,7 +79,7 @@
                             </div>
                           </div>
                         </div>
-                        <button type="submit" class="btn btn-primary btnC1" onclick="qualitativa()" >Calcular</button>
+                        <button type="submit" class="btn btn-primary btnC1">Calcular</button>
                       </form>
                   </div>
                 </div>
@@ -116,8 +115,5 @@
               <p class="copyright">Wolves Statistic © 2020</p>
           </div>
       </footer>
-      <script src ="func.js"></script>
-      <script src ="qualitativa.js"></script>
-      <script src ="quantitativa.js"></script>
 </body>
 </html>
