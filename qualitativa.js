@@ -1,4 +1,7 @@
 function qualitativa(){
+
+    alert("Teste")
+
     let tipodado = document.getElementById('tipdadosqualitativa').value
     let tipoquali = document.getElementById('qualitativa').value
     tablequalitativa.innerHTML = ""
@@ -6,7 +9,7 @@ function qualitativa(){
     tcqualitativa.innerHTML = ''
 
     if (tipodado == 'AMOSTRA'){
-        if (tipoquali == 'DISCRETA'){
+        if (tipoquali == 'ORDINAL'){
             qualitativaordinal()
         }else if (tipoquali == 'NOMINAL'){
             qualitativanominal()
