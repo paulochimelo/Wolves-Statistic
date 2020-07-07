@@ -34,5 +34,13 @@ function PROBABILIDADE(){
     console.log(fracasso)
     console.log(amostra)
     console.log(evento)
+
+    let k = 1
+
+    for (evento > 0;;){
+        k = k * evento
+        evento - 1
+    }
+    console.log (k)
 }
 
