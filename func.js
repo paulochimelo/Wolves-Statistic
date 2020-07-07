@@ -40,8 +40,9 @@ function PROBABILIDADE(){
     for (evento > 0;;){
         k = k * evento
         evento - 1
+        console.log(evento)
     }
-    
+
     console.log(k)
 }
 
