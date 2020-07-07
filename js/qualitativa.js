@@ -1,4 +1,7 @@
 function qualitativa(){
+
+    alert("teste")
+
     let tipodado = document.getElementById('tipdadosqualitativa').value
     let tipoquali = document.getElementById('qualitativa').value
     tablequalitativa.innerHTML = ""
