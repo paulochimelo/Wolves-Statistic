@@ -25,9 +25,14 @@ alert(k2,k)
 
 function PROBABILIDADE(){
     console.log('S')
+    let sucesso = document.getElementById('sucesso').value
+    let fracasso = document.getElementById('fracasso').value
+    let amostra = document.getElementById('mostra').value
+    let evento = document.getElementById('evento').value
+
+    console.log(sucesso)
+    console.log(fracasso)
+    console.log(amostra)
+    console.log(evento)
 }
 
-
-function probabilidadenominal(){
-    console.log("S")
-}
