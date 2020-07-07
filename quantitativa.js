@@ -1,3 +1,7 @@
+function test(){
+  console.log('s')
+}
+
 function quantitativa(){
     let tipodados = document.getElementById('tipdadosquantitativa').value
     let tipoquanti = document.getElementById('quantitativa').value
