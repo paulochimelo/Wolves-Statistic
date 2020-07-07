@@ -53,7 +53,7 @@
                           </div>
                             <div class="selecao">
                                 <label class="desc-input">Tipo de Pesquisa: </label>
-                                <select class="input-drop">
+                                <select class="input-drop" id = 'tipdadosquantitativa'>
                                     <option selected>Selecione</option>
                                     <option value="AMOSTRA">Amostra</option>
                                     <option value="POPULAÇÃO">População</option>
@@ -61,7 +61,7 @@
                             </div>
                             <div class="selecao">
                                 <label class="desc-input1">Tipo de Variável: </label>
-                                <select class="input-drop">
+                                <select class="input-drop" id = 'quantitativa'>
                                     <option selected>Selecione</option>
                                     <option value="DISCRETA">Quantitativa Discreta</option>
                                     <option value="NOMINAL">Quantitativa Contínua</option>
@@ -79,7 +79,7 @@
                             </div>
                           </div>
                         </div>
-                        <button type="submit" class="btn btn-primary btnC1">Calcular</button>
+                        <button type="submit" class="btn btn-primary btnC1" onclick="quantitativa()">Calcular</button>
                       </form>
                       <div >
                         <table id="variavelquant"><tr><strong><h1></h1></strong></tr></table>
@@ -128,7 +128,6 @@
           </div>
       </footer>
       <script src ="func.js"></script>
-      <script src ="qualitativa.js"></script>
-      <script src ="quantitativa.js"></script>
+      
 </body>
 </html>
