@@ -1,4 +1,30 @@
+function probnorm(){
+  console.log('S')
 
+  let media = document.getElementById('med').value
+  let desvio = document.getElementById('dsp').value
+  let quant = document.getElementById('quanti').value
+  let interval = document.getElementById('interval').value
+
+  console.log(media)
+  console.log(desvio)
+  console.log(quant)
+  console.log(interval)
+}
+
+function probuni(){
+  console.log('S')
+  let pmax = document.getElementById('pmax').value
+  let pmin = document.getElementById('pmin').value
+  let quanti = document.getElementById('quant').value
+  let intervalo = document.getElementById('inter').value
+
+
+  console.log(pmax)
+  console.log(pmin)
+  console.log(quanti)
+  console.log(intervalo)
+}
 
 
 

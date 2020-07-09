@@ -62,19 +62,19 @@
                         <div class="form-group">
                             <div>
                                 <label class="desc-input-uniforme">Intervalo: </label>
-                                <select class="input-drop">
+                                <select class="input-drop" id = "interval">
                                     <option selected>Selecione</option>
                                     <option value="1">Maior</option>
                                     <option value="2">Entre</option>
-                                    <option value="2">Menor</option>
+                                    <option value="3">Menor</option>
                                 </select>
                             </div>
-                            <input type="text" class="form-control input-uniforme" id="" placeholder="Média">
-                            <input type="text" class="form-control input-uniforme" id="" placeholder="Desvio Padrão">
-                            <input type="text" class="form-control input-uniforme" id="" placeholder="Quantidade">
+                            <input type="text" class="form-control input-uniforme" id="med" placeholder="Média">
+                            <input type="text" class="form-control input-uniforme" id="dsp" placeholder="Desvio Padrão">
+                            <input type="text" class="form-control input-uniforme" id="quanti" placeholder="Quantidade">
                           </div>
                         </div>
-                        <button type="submit" class="btn btn-primary btnUni">Calcular</button>
+                        <button type="submit" class="btn btn-primary btnUni" onclick="probnorm()">Calcular</button>
                       </form>
                   </div>
                 </div>
@@ -113,5 +113,6 @@
                 <p class="copyright">Wolves Statistic © 2020</p>
             </div>
         </footer>
+        <script src="func.js"></script>
 </body>
 </html>
