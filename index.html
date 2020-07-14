@@ -144,8 +144,17 @@
     <div class = 'normal'>
         <h1>Binominal</h1>
         <p>Amostra</p>
-        <input id = 'amostra' type = "number" placeholder="00"></input>
-        <p>Sucesso      Fracasso</p>
+        <input id = 'mostra' type = "number" placeholder="00"></input>
+        <p>Sucesso</p>
+        <input id = 'sucesso' type = "number" placeholder="00"></input>
+        <p>Fracasso</p>
+        <input id = 'fracasso' type = "number" placeholder="00"></input>
+        <p>Evento</p>
+        <input id = 'evento' type = "number" placeholder="00"></input>
+        <button class="button" onclick="binominal()">Calcular</button>
+    </div>
+    <div>
+        <table id = "probnomi"></table>
     </div>
 
     <div class = 'titulo'>
@@ -174,6 +183,5 @@
     <script src ="correlacao.js"></script>
     <script src ="normal.js"></script>
     <script src ="uniforme.js"></script>
-    <script scr ="binominal.js"></script>
 </body>
 </html>

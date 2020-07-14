@@ -134,3 +134,72 @@ function tabelaZ(n1, n2){
     
     return tabelaZ[n1][n2];
 }
+
+
+
+function binominal(){
+    console.log('S')
+    let sucesso = document.getElementById('sucesso').value
+    let fracasso = document.getElementById('fracasso').value
+    let amostra = document.getElementById('mostra').value
+    let evento = document.getElementById('evento').value
+
+    //console.log(sucesso)
+    //console.log(fracasso)
+    //console.log(amostra)
+    //console.log(evento)
+
+    let aux3 = evento
+    let aux4 = sucesso
+    let = suce = 1
+
+    while (aux3 > 0){
+        suce = suce * aux4
+        aux3 = aux3 - 1
+    }
+    console.log(suce)
+
+    let k = amostra - evento 
+    let aux5 = k
+    let aux1 = 1
+    while (k > 0){
+        aux1 = aux1 * k
+        k = k - 1
+       // console.log(k)
+    }
+
+    console.log(aux1)
+
+    let aux2 = 1
+
+    while (evento > 0){
+        aux2 = aux2 * evento
+        evento = evento - 1
+    }
+    console.log(aux2)
+
+    let n = 1
+
+    while (amostra > 0){
+        n = n * amostra
+        amostra = amostra - 1
+        //console.log(amostra)
+    }
+
+    console.log(n)
+    let fraca = 1
+    while (aux5 > 0){
+        fraca = fraca * fracasso
+        aux5 = aux5 - 1
+    }
+
+    console.log(fraca)
+    let result = n /(aux1 * aux2) * suce * fraca * 100
+    result = result.toFixed(2)
+    console.log(result)
+    let fraq = 100 - result
+    fraq = fraq.toFixed(2)
+
+    probnomi.innerHTML = ('Sucesso = ' + result + '% ')
+    
+}
