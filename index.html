@@ -12,88 +12,9 @@
     </style>
    <script src="https://d3js.org/d3.v4.min.js"></script>
 	<script src="chart.js"></script>
-   <title>Testes Implantação</title>
+   <title>Wolves Statistic</title>
 </head>
 <body>
-    <div class = 'titulo'>
-        <h1><center>Estatistica descritiva</center></h1>
-    </div>  
-    <div class = 'qualdiscre'>
-        <h1>Qualitativa</h1>
-        <p>Nome da variavel</p> 
-        <input type="string" id="variavelqualitativa"  placeholder="Insira o nome da variavel">
-        <select id = tipdadosqualitativa>
-            <option value="AMOSTRA"  id = "Amostraqual">AMOSTRA</option>
-            <option value="POPULAÇÃO"  id = "Amostraqual">POPULAÇÃO</option>
-        </select>
-        <p>Insira os Dados</p> 
-        <input type="string" id="valor"  placeholder="Valores sepadados por ;">
-        <select id = qualitativa>
-            <option value="DISCRETA"  id = "discreta">ORDINAL</option>
-            <option value="NOMINAL"  id = "nominal">NOMINAL</option>
-        </select>
-                <div>
-                <p>Informe a Ordem</p>
-                <input id = ordenar type = "string" placeholder="Separação por ;"></input>
-                <button type="button" onclick="qualitativa()">Calcular</button>
-                </div>
-                <div>
-                    <p></p>
-                    <select id = medidaseparatizes onchange="medidaseparatiz()">
-                        <option value="1" id = "separatriz">MEDIDAS SEPARATRIZES</option>
-                        <option value="4"  id = "Q">QUARTIL</option>
-                        <option value="5"  id = "K">QUINTIL</option>
-                        <option value="10"  id = "D">DECIL</option>
-                        <option value="100"  id = "P">PORCENTIL</option>
-                    </select>
-                    <input id = porcentagem type = "number" min = "1" max = "1"></input>
-                    </div>
-        <div >
-            <table class="table" width="200px"  text-align: center table-layout: fixed margin-bottom : .5em id="variavelquali"><tr><strong><h1></h1></strong></tr></table>
-            <table id="tablequalitativa" border="1" class="table" text-align: center table-layout: fixed margin-bottom : .5em>
-            </table>
-        </div>
-        <div>
-            <table class="table" id="tcqualitativa"></table>
-            <table class="table" id="mdseparatriz"></table>   
-        </div>
-        
-        
-    </div>
-
-    <div class = 'Quantitativa'>
-        <h1>Quantitativa </h1>
-        <p>Nome da variavel</p>
-        <input type="string" id="variavelquantitativa"  placeholder="Insira o nome da variavel">
-        <select id = tipdadosquantitativa>
-            <option value="AMOSTRA"  id = "Amostraquant">AMOSTRA</option>
-            <option value="POPULAÇÃO"  id = "Amostraquant">POPULAÇÃO</option>
-        </select>
-        <p>Insira os Dados</p> 
-        <input type="string" id="valores"  placeholder="Valores sepadados por ;">
-        <select id = quantitativa>
-            <option value="DISCRETA"  id = "discretaquant">DISCRETA</option>
-            <option value="NOMINAL" id = "nominalquant">CONTINUA</option>
-        </select>        
-        <select id = medidaseparatizesm onchange="medidaseparatiz()">
-            <option value="1" id = "separatrizm">MEDIDAS SEPARATRIZES</option>
-            <option value="4"  id = "Qm">QUARTIL</option>
-            <option value="5"  id = "Km">QUINTIL</option>
-            <option value="10"  id = "Dm">DECIL</option>
-            <option value="100"  id = "Pm">PORCENTIL</option>
-        </select>
-        <input id = porcentagemm type = "number" min = "1" max = "1"></input>
-        <button class="button" onclick="quantitativa()">Calcular</button>
-        <div >
-            <table id="variavelquant"><tr><strong><h1></h1></strong></tr></table>
-            <table id="tablequantitativa" border="1">
-            </table>
-            <table class="table" id="tendenciacentral"></table>
-            <table class="table" id="mdseparatrizm"></table>
-        </div>
-        <div>
-
-        </div>
     </div>     
     <div class = 'titulo'>
         <h1><center>Probabilidade</center></h1>
@@ -129,24 +50,6 @@
         <table class="table" id="mediaedesvio"></table>  
     </div>
 
-
-    <div class = 'normal'>
-        <h1>Normal</h1>
-		<input type="number" id="quantidadeNormal" placeholder="Quantidade">
-		<select id="tipos" onclick="selectNormal()">
-			<option value="">Classes ? </option>
-			<option value='0'>MAIS QUE</option>
-			<option value="1">MENOR QUE</option>
-			<option value="2">ENTRE </option>
-		</select>
-		<div id='selectTipos'>
-
-		</div>
-		<div id="resultadoProbabilidade"></div>
-		<input type="number" name="" id="mediaNormal" placeholder="Media"><br>
-		<input type="number" name="" id="desvioNormal" placeholder="Desvio Padrão"><br>
-		<button onclick="probabilidadeNormal()">Calcular</button>
-    </div>
     <div class = 'normal'>
         <h1>Binominal</h1>
         <p>Amostra</p>
