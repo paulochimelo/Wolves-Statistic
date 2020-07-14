@@ -1,144 +1,172 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/home.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/sobre.css">
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
-    <link rel="stylesheet" href="assets/css/Footer-Dark.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="assets/css/Team-Boxed.css">
-    <title>Home</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Testes Implantação</title>
 </head>
 <body>
-    <nav class="navbar navbar-dark bg-dark">
-        <a class="navbar-brand logoH" href="index.html">
-          <img 
-          src="img/wolves.png" 
-          width="70" 
-          height="70" 
-          class="d-inline-block align-top" 
-          >
-            Wolves Statistic 
-        </a>
-        <div bg="dark navbar-expand-lg navbar-default" variant="dark"></div>
-            <div class="navbar navbar-expand-lg text-light links">
-              <a class="navbar-item nav-link active linkP back-link" href="#">Home</a>
-              <a class="nav-item nav-link active linkP back-link" href="sobre.html">Sobre</a>
-              <a class="nav-item nav-link active linkP back-link" href="calculos.html">Cálculos</a>
-              <button type="button" class="btn btn-primary btn-info btnH">Login</button>
-            </div>
-        </div>
-    </nav>
-    <div class="container-home">
-        <div class="soft">
-            <div class="Colum">
-                <div class="jumbotron infoJb">
-                    <h1 class="display-4 text-light titlI">Software</h1>
-                    <p class="text-light textI textI">
-                        Desenvolvido para ser <a class="infoT">Intuitivo</a>, <a class="infoT">Preciso</a> e
-                        <a class="infoT"> Gratuito</a> o <a class="infoT">Statistic Wolves </a>
-                        é um sistema fácil e prático, que realiza análises estatísticas de maneira simplificada 
-                        e precisa. E o melhor de tudo, é <a class="infoT">Gratuito</a>
-                    </p>
-                    <a href="calculos.html"><button type="button" class="btn btn-primary btn-info">Comece Já</button></a>
+    <div class = 'titulo'>
+        <h1><center>Estatistica descritiva</center></h1>
+    </div>  
+    <div class = 'qualdiscre'>
+        <h1>Qualitativa</h1>
+        <p>Nome da variavel</p> 
+        <input type="string" id="variavelqualitativa"  placeholder="Insira o nome da variavel">
+        <select id = tipdadosqualitativa>
+            <option value="AMOSTRA"  id = "Amostraqual">AMOSTRA</option>
+            <option value="POPULAÇÃO"  id = "Amostraqual">POPULAÇÃO</option>
+        </select>
+        <p>Insira os Dados</p> 
+        <input type="string" id="valor"  placeholder="Valores sepadados por ;">
+        <select id = qualitativa>
+            <option value="DISCRETA"  id = "discreta">ORDINAL</option>
+            <option value="NOMINAL"  id = "nominal">NOMINAL</option>
+        </select>
+                <div>
+                <p>Informe a Ordem</p>
+                <input id = ordenar type = "string" placeholder="Separação por ;"></input>
+                <button type="button" onclick="qualitativa()">Calcular</button>
                 </div>
-            </div>
-            <div class="img-soft">
-                <img 
-                src="img/est-soft.png"
-                width="650"
-                height="550"
-                class="d-inline-block align-top"
-                >
-            </div>
-        </div>
-        <div class="interface">
-            <div class="Colum-inter">
-                <div class="info-inter">
-                    <div class="jumbotron infoJb-inter">
-                        <h1 class="display-4 titlI">Interface</h1>
-                        <p class=" textI">
-                            O Statistic Wolves possui uma interface fácil, simples, estável e descomplicada, 
-                            visando a facilidade de uso. Além de conter alguns botões explicativos para 
-                            facilitar ainda mais!
-                        </p>
+                <div>
+                    <p></p>
+                    <select id = medidaseparatizes onchange="medidaseparatiz()">
+                        <option value="1" id = "separatriz">MEDIDAS SEPARATRIZES</option>
+                        <option value="4"  id = "Q">QUARTIL</option>
+                        <option value="5"  id = "K">QUINTIL</option>
+                        <option value="10"  id = "D">DECIL</option>
+                        <option value="100"  id = "P">PORCENTIL</option>
+                    </select>
+                    <input id = porcentagem type = "number" min = "1" max = "1"></input>
                     </div>
-                </div>
-                <div class="img-inter">
-                    <img 
-                    src="img/est-inter2.png" 
-                    width="500"
-                    height="450"
-                    class="d-inline-block align-top"
-                    >
-                </div>
-            </div>
+        <div >
+            <table class="table" width="200px"  text-align: center table-layout: fixed margin-bottom : .5em id="variavelquali"><tr><strong><h1></h1></strong></tr></table>
+            <table id="tablequalitativa" border="1" class="table" text-align: center table-layout: fixed margin-bottom : .5em>
+            </table>
         </div>
-        <div class="funcionalidades">
-            <div class="Colum-func">
-                <div class="info-func">
-                    <div class="jumbotron infoJb-func">
-                        <h1 class="display-4 text-light titlI">Funcionalidades</h1>
-                        <p class="text-light textI">
-                            O principal intuito do projeto é facilitar a vida de alunos e profissionais,
-                            e para isso contamos com 3 sessões que possuem aplicações simples e estáveis
-                            que retornam resultados precisos.
-                        </p>
-                    </div>
-                </div>
-                <div class="img-func">
-                    <img 
-                    src="img/est-func.png"
-                    width="580"
-                    height="480"
-                    class="d-inline-block align-top"
-                    >
-                </div>
-            </div>
+        <div>
+            <table class="table" id="tcqualitativa"></table>
+            <table class="table" id="mdseparatriz"></table>   
         </div>
+        
+        
     </div>
-    <div class="footer-dark">
-        <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6 col-md-3 item">
-                        <h3>Serviços</h3>
-                        <ul>
-                            <li><a href="#">Estatistica Descritiva</a></li>
-                            <li><a href="#">Probabilidade</a></li>
-                            <li><a href="#">Correlação e Regressão</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-6 col-md-3 item">
-                        <h3>Sobre</h3>
-                        <ul>
-                            <li><a href="#">Time</a></li>
-                            <li><a href="#">Contato</a></li>
-                            <li></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-6 item text">
-                        <h3>Wolves Statistic</h3>
-                        <p>Desenvolvido para ser Intuitivo, Preciso e 
-                        Gratuito o Statistic Wolves 
-                        é um sistema fácil e prático, que realiza análises estatísticas de maneira simplificada 
-                        e precisa. E o melhor de tudo, é Gratuito</p>
-                    </div>
-                    <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a></div>
-                </div>
-                <p class="copyright">Wolves Statistic © 2020</p>
-            </div>
-        </footer>
+
+    <div class = 'Quantitativa'>
+        <h1>Quantitativa </h1>
+        <p>Nome da variavel</p>
+        <input type="string" id="variavelquantitativa"  placeholder="Insira o nome da variavel">
+        <select id = tipdadosquantitativa>
+            <option value="AMOSTRA"  id = "Amostraquant">AMOSTRA</option>
+            <option value="POPULAÇÃO"  id = "Amostraquant">POPULAÇÃO</option>
+        </select>
+        <p>Insira os Dados</p> 
+        <input type="string" id="valores"  placeholder="Valores sepadados por ;">
+        <select id = quantitativa>
+            <option value="DISCRETA"  id = "discretaquant">DISCRETA</option>
+            <option value="NOMINAL" id = "nominalquant">CONTINUA</option>
+        </select>        
+        <select id = medidaseparatizesm onchange="medidaseparatiz()">
+            <option value="1" id = "separatrizm">MEDIDAS SEPARATRIZES</option>
+            <option value="4"  id = "Qm">QUARTIL</option>
+            <option value="5"  id = "Km">QUINTIL</option>
+            <option value="10"  id = "Dm">DECIL</option>
+            <option value="100"  id = "Pm">PORCENTIL</option>
+        </select>
+        <input id = porcentagemm type = "number" min = "1" max = "1"></input>
+        <button class="button" onclick="quantitativa()">Calcular</button>
+        <div >
+            <table id="variavelquant"><tr><strong><h1></h1></strong></tr></table>
+            <table id="tablequantitativa" border="1">
+            </table>
+            <table class="table" id="tendenciacentral"></table>
+            <table class="table" id="mdseparatrizm"></table>
+        </div>
+        <div>
+
+        </div>
+    </div>     
+    <div class = 'titulo'>
+        <h1><center>Probabilidade</center></h1>
     </div>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script> 
+
+    <div class = 'normal'>
+        <h1>Uniforme</h1>
+        <p>Valor minimo:</P>
+        <input id = 'valorMin' type = "string" placeholder="00"></input>
+        
+        <P>Valor maximo:</p>
+        <input id = 'valorMax' type = "string" placeholder="00"></input>
+       
+        <P>Mais que</p>
+        <input id = 'maisQ' type = "string" placeholder="00"></input>
+        <button class="button" onclick="maisq()">Calcular</button>
+        <table class="table" id="maisqdiv"></table>   
+
+        <P>Menos que</p>
+        <input id = 'menosQ' type = "string" placeholder="00"></input>
+        <button class="button" onclick="menosq()">Calcular</button>
+        <table class="table" id="menosqdiv"></table> 
+
+        <P>Entre</p>
+        <input id = 'entre1' type = "string" placeholder="00"></input>
+        <P>e</p>
+        <input id = 'entre2' type = "string" placeholder="00"></input>
+        <button class="button" onclick="entre()">Calcular</button>
+        <table class="table" id="entrediv"></table> 
+        <p></p>
+    </div>
+    <div>
+        <table class="table" id="mediaedesvio"></table>  
+    </div>
+
+
+    <div class = 'normal'>
+        <h1>Normal</h1>
+       <p>Quantidade:</P>
+        <input id = 'quantidadeNormal' type = "number" placeholder="00"></input>
+        <select id = "tipos" onclick="selectNormal()">
+            <option value="1"  id = "menor-que">Menor que:</option>
+            <option value="2" id = "entre">Entre:</option>
+            <option value="0" id = "maior-que">Maior que:</option>
+        </select>
+        
+        <p>Média:</P>
+        <input id = 'media' type = "string" placeholder="00"></input>
+
+        <p>Desvio padrão:</P>
+        <input id = 'desvioPadrao' type = "string" placeholder="00"></input>
+
+        <button class="button" id=calcular3 onclick="probNormal()">Calcular</button>
+        <table class="table" id="escrever"></table>  
+    </div>
+
+    <div class = 'titulo'>
+        <h1><center>Correlação e regressão</center></h1>
+    </div>
+    <p>X:</P>
+        <input id = 'correlacao' type = "string" placeholder="Separe os números por ;"></input>
+    <p>Y:</P>
+        <input id = 'regressao' type = "string" placeholder="Separe os números por ;"></input>
+        <button class="button" onclick="corelacao()">Calcular</button>
+        <div id="corelacao_results"></div>
+        <div>
+
+
+        </div>
+        <div> 
+        <p>Ponto futuro X:</P>
+        <input id = 'x_future' type = "text" oninput='regressaoX()' placeholder="Separe os números por ;"></input>
+        <p>Ponto futuro Y:</P>
+        <input id = 'y_future' type = "text" oninput='regressaoY()' placeholder="Separe os números por ;"></input>
+    </div>
+        <div id="regressao_future"></div>
+<div class="graficos">
+    <canvas id="myChartgraficoCorrelacao" width="20" height="20"></canvas>
+</div>
+    <script src ="correlacao.js"></script>
+    <script src ="normal.js"></script>
+    <script src ="uniforme.js"></script>
 </body>
 </html>
